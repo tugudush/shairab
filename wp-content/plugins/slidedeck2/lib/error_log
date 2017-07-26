@@ -1,0 +1,36 @@
+[23-Jul-2016 19:13:08 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[24-Jul-2016 06:16:47 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[24-Jul-2016 09:44:33 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/widget.php on line 35
+[24-Jul-2016 20:16:01 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/widget.php on line 35
+[24-Jul-2016 22:55:46 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[25-Jul-2016 08:05:25 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/widget.php on line 35
+[27-Jul-2016 23:28:49 America/Denver] PHP Fatal error:  Cannot access self:: when no class scope is active in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/constants.php on line 29
+[29-Jul-2016 11:00:14 America/Denver] PHP Fatal error:  Cannot access self:: when no class scope is active in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/constants.php on line 29
+[24-Aug-2016 06:52:45 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[24-Aug-2016 08:13:34 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/widget.php on line 35
+[24-Aug-2016 12:31:05 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[24-Aug-2016 13:25:09 America/Denver] PHP Fatal error:  Cannot access self:: when no class scope is active in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/constants.php on line 29
+[24-Aug-2016 15:44:42 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/widget.php on line 35
+[24-Aug-2016 20:03:48 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[24-Aug-2016 21:43:13 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/widget.php on line 35
+[24-Aug-2016 23:59:59 America/Denver] PHP Fatal error:  Cannot access self:: when no class scope is active in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/constants.php on line 29
+[25-Aug-2016 04:01:49 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[26-Aug-2016 13:07:07 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/widget.php on line 35
+[26-Aug-2016 18:39:29 America/Denver] PHP Fatal error:  Cannot access self:: when no class scope is active in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/constants.php on line 29
+[27-Aug-2016 04:23:49 America/Denver] PHP Fatal error:  Class 'SlideDeckLitePlugin' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/slidedeck-plugin-install.php on line 2
+[27-Aug-2016 13:05:27 America/Denver] PHP Fatal error:  Class 'SlideDeckLitePlugin' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/slidedeck-plugin-install.php on line 2
+[27-Aug-2016 22:57:22 America/Denver] PHP Fatal error:  Class 'SlideDeckLitePlugin' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/slidedeck-plugin-install.php on line 2
+[02-Jan-2017 18:38:12 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[02-Jan-2017 21:25:24 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/widget.php on line 35
+[03-Jan-2017 01:35:55 America/Denver] PHP Fatal error:  Cannot access self:: when no class scope is active in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/constants.php on line 29
+[03-Jan-2017 02:48:20 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[03-Jan-2017 05:06:31 America/Denver] PHP Fatal error:  Class 'SlideDeckLitePlugin' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/slidedeck-plugin-install.php on line 2
+[03-Jan-2017 09:01:49 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/widget.php on line 35
+[03-Jan-2017 10:14:38 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[03-Jan-2017 11:46:04 America/Denver] PHP Fatal error:  Cannot access self:: when no class scope is active in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/constants.php on line 29
+[03-Jan-2017 13:25:18 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/flash.php on line 66
+[03-Jan-2017 14:25:31 America/Denver] PHP Fatal error:  Cannot access self:: when no class scope is active in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/constants.php on line 29
+[03-Jan-2017 15:02:59 America/Denver] PHP Fatal error:  Class 'SlideDeckLitePlugin' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/slidedeck-plugin-install.php on line 2
+[03-Jan-2017 21:31:36 America/Denver] PHP Fatal error:  Class 'SlideDeckLitePlugin' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/slidedeck-plugin-install.php on line 2
+[04-Jan-2017 04:36:05 America/Denver] PHP Fatal error:  Class 'WP_Widget' not found in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/widget.php on line 35
+[05-Jan-2017 07:24:20 America/Denver] PHP Fatal error:  Cannot access self:: when no class scope is active in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/lib/constants.php on line 29

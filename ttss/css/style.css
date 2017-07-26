@@ -1,0 +1,84 @@
+/* CSS Document */
+
+body {
+	background: #F6F6F6;	
+}
+
+.wrap {
+	max-width: 1140px;
+	width: 90%;
+	margin: 0 auto;	
+}
+
+header {
+	border-bottom: 2px solid #9DC82A;
+	background: #FFFFFF;
+}
+
+header .inner {
+	padding: 20px 0;
+	/*background: #999;*/
+}
+
+header #logo {
+	float: left;	
+}
+
+#logo img {
+	width: 100%;
+}
+
+#items {
+	margin: 20px auto;
+	background: #FFFFFF;
+}
+
+#items .inner {
+	padding: 0 30px;
+}
+
+.item {
+	float: left;
+	width: 30%;
+	margin-top: 50px;
+	margin-right: 5%;
+	/*background: #888;*/
+}
+
+.item:hover {
+	outline-color: #9DC82A;
+	outline-style: dashed;
+}
+
+.item:nth-child(3n+3) {
+	margin-right: 0;
+}
+
+.item img {	
+	width: 100%;	
+}
+
+.item .photo {
+	display: block;
+}
+
+.item .heading {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	font-family: Lato, serif;
+	font-weight: bold;
+	font-size: 18px;
+	color: #171717;
+}
+
+footer {
+	background: #FFFFFF;
+	border-top: 1px solid #e4e4e4;
+	color: #818986;
+}
+
+footer .inner {
+	padding: 20px 0;
+	text-align: center;
+}

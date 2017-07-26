@@ -1,0 +1,220 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Blogera\n"
+"POT-Creation-Date: 2016-11-12 15:20+0530\n"
+"PO-Revision-Date: 2016-11-12 15:20+0530\n"
+"Last-Translator: Zolo Themes <partha.rkl@gmail.com>\n"
+"Language-Team: zolothemes <zolothemes@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:25
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: archive.php:41 index.php:45 search.php:36
+msgid "&laquo;"
+msgstr ""
+
+#: archive.php:42 index.php:46 search.php:37
+msgid "&raquo;"
+msgstr ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:112
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:121
+msgid "Footer One"
+msgstr ""
+
+#: functions.php:130
+msgid "Footer Two"
+msgstr ""
+
+#: functions.php:139
+msgid "Footer Three"
+msgstr ""
+
+#: functions.php:148
+msgid "Footer Four"
+msgstr ""
+
+#: functions.php:182
+msgid "expand child menu"
+msgstr ""
+
+#: functions.php:183
+msgid "collapse child menu"
+msgstr ""
+
+#: functions.php:241
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: header.php:73
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer.php:25
+msgid "Title, Tagline & Logo"
+msgstr ""
+
+#: inc/customizer.php:31
+msgid "Top Bar Contact"
+msgstr ""
+
+#: inc/customizer.php:41
+msgid "Add header email here"
+msgstr ""
+
+#: inc/customizer.php:51
+msgid "Add header phone number here"
+msgstr ""
+
+#: inc/customizer.php:58
+msgid "Social Icons"
+msgstr ""
+
+#: inc/customizer.php:63
+msgid "-"
+msgstr ""
+
+#: inc/customizer.php:64
+msgid "Facebook"
+msgstr ""
+
+#: inc/customizer.php:65
+msgid "Twitter"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Google Plus"
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "Instagram"
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "RSS Feeds"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "Vimeo"
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "Youtube"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Flickr"
+msgstr ""
+
+#: inc/customizer.php:86 inc/customizer.php:99
+msgid "Icon "
+msgstr ""
+
+#: inc/customizer.php:99
+msgid " Url"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "Primary Color"
+msgstr ""
+
+#: inc/customizer.php:143
+msgid "Main Text Color"
+msgstr ""
+
+#: inc/customizer.php:150
+msgid "Featured Posts Slider"
+msgstr ""
+
+#: inc/customizer.php:160
+msgid "Enable"
+msgstr ""
+
+#: inc/customizer.php:170
+msgid "Category For Featured Posts Slider"
+msgstr ""
+
+#: inc/template-tags.php:174
+#, php-format
+msgid "Continue Reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: single.php:32
+msgid "Next"
+msgstr ""
+
+#: single.php:33
+msgid "Next post:"
+msgstr ""
+
+#: single.php:35
+msgid "Previous"
+msgstr ""
+
+#: single.php:36
+msgid "Previous post:"
+msgstr ""
+
+#: template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:24 template-parts/content-single.php:29
+#: template-parts/content.php:35
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-page.php:28 template-parts/content-single.php:33
+#: template-parts/content.php:39
+msgid "Page"
+msgstr ""
+
+#: template-parts/content-page.php:38
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""

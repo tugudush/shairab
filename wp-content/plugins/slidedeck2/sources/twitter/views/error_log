@@ -1,0 +1,7 @@
+[24-Feb-2016 18:44:56 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/twitter/views/show.php on line 37
+[25-Feb-2016 04:00:53 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/twitter/views/show.php on line 37
+[25-Feb-2016 09:52:04 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/twitter/views/show.php on line 37
+[26-Feb-2016 05:11:55 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/twitter/views/show.php on line 37
+[09-Jan-2017 21:08:45 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/twitter/views/show.php on line 37
+[10-Jan-2017 05:32:49 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/twitter/views/show.php on line 37
+[10-Jan-2017 21:05:20 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/twitter/views/show.php on line 37

@@ -1,0 +1,16 @@
+@import url( '//fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' );
+
+#site-title {
+	font-family: "Old Standard TT", "Times New Roman", serif;
+	font-weight: 700;
+	font-style:  normal;
+}
+
+#site-title a {
+	color: #4c463e;
+}
+
+#site-description {
+	font-family: 'Open Sans', Arial, sans-serif; 
+	color: #8d8f57;
+}

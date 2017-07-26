@@ -1,0 +1,131 @@
+[24-Jul-2016 10:28:13 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/manage.php on line 35
+[24-Jul-2016 23:09:34 America/Denver] PHP Fatal error:  Call to undefined function do_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/form.php on line 34
+[25-Jul-2016 11:21:37 America/Denver] PHP Fatal error:  Call to undefined function do_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/form.php on line 34
+[25-Jul-2016 12:15:36 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/manage.php on line 35
+[27-Jul-2016 17:12:10 America/Denver] PHP Fatal error:  Call to undefined function do_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/form.php on line 34
+[27-Jul-2016 21:49:38 America/Denver] PHP Notice:  Undefined variable: first_preview in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 35
+[27-Jul-2016 21:49:38 America/Denver] PHP Notice:  Undefined variable: preview_w in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 36
+[27-Jul-2016 21:49:38 America/Denver] PHP Fatal error:  Call to undefined function slidedeck() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 37
+[09-Aug-2016 03:17:38 America/Denver] PHP Notice:  Undefined variable: first_preview in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 35
+[09-Aug-2016 03:17:38 America/Denver] PHP Notice:  Undefined variable: preview_w in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 36
+[09-Aug-2016 03:17:38 America/Denver] PHP Fatal error:  Call to undefined function slidedeck() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 37
+[10-Aug-2016 17:20:46 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/admin-options.php on line 35
+[13-Aug-2016 04:20:41 America/Denver] PHP Fatal error:  Call to undefined function language_attributes() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/insert-iframe.php on line 35
+[24-Aug-2016 08:50:13 America/Denver] PHP Fatal error:  Call to undefined function do_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/form.php on line 34
+[24-Aug-2016 12:16:24 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/manage.php on line 35
+[24-Aug-2016 14:51:19 America/Denver] PHP Notice:  Undefined variable: first_preview in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 35
+[24-Aug-2016 14:51:19 America/Denver] PHP Notice:  Undefined variable: preview_w in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 36
+[24-Aug-2016 14:51:19 America/Denver] PHP Fatal error:  Call to undefined function slidedeck() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 37
+[24-Aug-2016 15:57:36 America/Denver] PHP Fatal error:  Call to undefined function do_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/form.php on line 34
+[24-Aug-2016 16:13:48 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/admin-options.php on line 35
+[24-Aug-2016 16:25:51 America/Denver] PHP Fatal error:  Call to undefined function language_attributes() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/insert-iframe.php on line 35
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 38
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_VERSION - assumed 'SLIDEDECK2_VERSION' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 42
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_LICENSE - assumed 'SLIDEDECK2_LICENSE' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 43
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Undefined variable: scripts in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 48
+[24-Aug-2016 17:14:09 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 48
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Undefined variable: lens in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 80
+[24-Aug-2016 17:14:09 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_VERSION - assumed 'SLIDEDECK2_VERSION' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 80
+[24-Aug-2016 17:14:09 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 82
+[24-Aug-2016 17:19:52 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/admin-upgrades.php on line 35
+[24-Aug-2016 22:45:31 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/manage.php on line 35
+[25-Aug-2016 01:36:08 America/Denver] PHP Fatal error:  Call to undefined function do_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/form.php on line 34
+[25-Aug-2016 02:29:51 America/Denver] PHP Notice:  Undefined variable: first_preview in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 35
+[25-Aug-2016 02:29:51 America/Denver] PHP Notice:  Undefined variable: preview_w in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 36
+[25-Aug-2016 02:29:51 America/Denver] PHP Fatal error:  Call to undefined function slidedeck() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 37
+[26-Aug-2016 13:23:33 America/Denver] PHP Fatal error:  Call to undefined function do_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/form.php on line 34
+[26-Aug-2016 18:24:53 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/manage.php on line 35
+[26-Aug-2016 19:39:39 America/Denver] PHP Notice:  Undefined variable: first_preview in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 35
+[26-Aug-2016 19:39:39 America/Denver] PHP Notice:  Undefined variable: preview_w in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 36
+[26-Aug-2016 19:39:39 America/Denver] PHP Fatal error:  Call to undefined function slidedeck() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 37
+[26-Aug-2016 20:04:34 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/admin-options.php on line 35
+[26-Aug-2016 20:10:08 America/Denver] PHP Fatal error:  Call to undefined function language_attributes() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/insert-iframe.php on line 35
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 38
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_VERSION - assumed 'SLIDEDECK2_VERSION' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 42
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_LICENSE - assumed 'SLIDEDECK2_LICENSE' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 43
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Undefined variable: scripts in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 48
+[26-Aug-2016 20:22:59 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 48
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Undefined variable: lens in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 80
+[26-Aug-2016 20:22:59 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_VERSION - assumed 'SLIDEDECK2_VERSION' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 80
+[26-Aug-2016 20:22:59 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 82
+[26-Aug-2016 20:31:50 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/admin-upgrades.php on line 35
+[27-Aug-2016 01:26:22 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/getcode-dialog.php on line 35
+[27-Aug-2016 03:32:45 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/first-save-dialog.php on line 35
+[27-Aug-2016 03:44:40 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/gplus-posts-how-to.php on line 40
+[27-Aug-2016 11:28:56 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/getcode-dialog.php on line 35
+[27-Aug-2016 12:20:07 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/first-save-dialog.php on line 35
+[27-Aug-2016 12:34:36 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/gplus-posts-how-to.php on line 40
+[27-Aug-2016 19:53:41 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/getcode-dialog.php on line 35
+[27-Aug-2016 20:13:57 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/first-save-dialog.php on line 35
+[27-Aug-2016 21:51:21 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/gplus-posts-how-to.php on line 40
+[28-Aug-2016 15:17:37 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/first-save-dialog.php on line 35
+[28-Aug-2016 15:25:26 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/gplus-posts-how-to.php on line 40
+[04-Jan-2017 17:25:14 America/Denver] PHP Fatal error:  Call to undefined function do_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/form.php on line 34
+[04-Jan-2017 18:11:44 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/manage.php on line 35
+[05-Jan-2017 04:36:20 America/Denver] PHP Fatal error:  Call to undefined function do_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/form.php on line 34
+[05-Jan-2017 05:19:50 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/manage.php on line 35
+[05-Jan-2017 08:03:50 America/Denver] PHP Notice:  Undefined variable: first_preview in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 35
+[05-Jan-2017 08:03:50 America/Denver] PHP Notice:  Undefined variable: preview_w in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 36
+[05-Jan-2017 08:03:50 America/Denver] PHP Fatal error:  Call to undefined function slidedeck() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 37
+[05-Jan-2017 12:54:31 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/admin-options.php on line 35
+[05-Jan-2017 13:55:43 America/Denver] PHP Notice:  Undefined variable: first_preview in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 35
+[05-Jan-2017 13:55:43 America/Denver] PHP Notice:  Undefined variable: preview_w in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 36
+[05-Jan-2017 13:55:43 America/Denver] PHP Fatal error:  Call to undefined function slidedeck() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 37
+[05-Jan-2017 14:22:10 America/Denver] PHP Fatal error:  Call to undefined function language_attributes() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/insert-iframe.php on line 35
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 38
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_VERSION - assumed 'SLIDEDECK2_VERSION' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 42
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_LICENSE - assumed 'SLIDEDECK2_LICENSE' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 43
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Undefined variable: scripts in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 48
+[05-Jan-2017 17:18:55 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 48
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Undefined variable: lens in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 80
+[05-Jan-2017 17:18:55 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_VERSION - assumed 'SLIDEDECK2_VERSION' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 80
+[05-Jan-2017 17:18:55 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 82
+[06-Jan-2017 09:34:48 America/Denver] PHP Fatal error:  Call to undefined function do_action() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/form.php on line 34
+[06-Jan-2017 09:49:01 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/manage.php on line 35
+[07-Jan-2017 02:34:03 America/Denver] PHP Notice:  Undefined variable: first_preview in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 35
+[07-Jan-2017 02:34:03 America/Denver] PHP Notice:  Undefined variable: preview_w in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 36
+[07-Jan-2017 02:34:03 America/Denver] PHP Fatal error:  Call to undefined function slidedeck() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview.php on line 37
+[07-Jan-2017 02:47:47 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/admin-options.php on line 35
+[07-Jan-2017 06:46:10 America/Denver] PHP Fatal error:  Call to undefined function language_attributes() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/insert-iframe.php on line 35
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 38
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_VERSION - assumed 'SLIDEDECK2_VERSION' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 42
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_LICENSE - assumed 'SLIDEDECK2_LICENSE' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 43
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Undefined variable: scripts in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 48
+[07-Jan-2017 06:51:19 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 48
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Undefined variable: wp_styles in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 78
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Undefined variable: lens in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 80
+[07-Jan-2017 06:51:19 America/Denver] PHP Notice:  Use of undefined constant SLIDEDECK2_VERSION - assumed 'SLIDEDECK2_VERSION' in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 80
+[07-Jan-2017 06:51:19 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/preview-iframe.php on line 82
+[07-Jan-2017 09:07:34 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/admin-upgrades.php on line 35
+[07-Jan-2017 09:22:56 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/getcode-dialog.php on line 35
+[07-Jan-2017 11:52:43 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/first-save-dialog.php on line 35
+[07-Jan-2017 12:32:45 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/gplus-posts-how-to.php on line 40
+[07-Jan-2017 16:42:07 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/admin-upgrades.php on line 35
+[07-Jan-2017 19:52:09 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/getcode-dialog.php on line 35
+[08-Jan-2017 11:14:43 America/Denver] PHP Fatal error:  Call to undefined function slidedeck2_flash() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/admin-upgrades.php on line 35
+[08-Jan-2017 11:19:45 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/getcode-dialog.php on line 35
+[08-Jan-2017 12:10:56 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/first-save-dialog.php on line 35
+[08-Jan-2017 12:19:48 America/Denver] PHP Fatal error:  Call to undefined function _e() in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/views/gplus-posts-how-to.php on line 40

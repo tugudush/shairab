@@ -1,0 +1,139 @@
+/**
+ * Theme Name:  Christmas Joy
+ * Theme URI:   http://themehybrid.com/themes/christmas-joy
+ * Description: Celebrating the season with a Christmas child theme for the Stargazer parent theme.
+ * Version:     1.0.0
+ * Author:      Jenny Ragan
+ * Author URI:  http://djrthemes.com
+ * Tags:        one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready
+ * Text Domain: christmas-joy
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template:    stargazer
+ */
+
+/*
+ * Note that the parent theme's `style.css` file is automatically loaded.  Do *not* try to load it again 
+ * with `@import`.
+ *
+ * The only custom CSS you really should add to your child theme is CSS to overwrite colors and fonts.  The 
+ * things available to be overwritten are labeled as the "Fun Zone" in the Stargazer theme's `style.css` file. 
+ * Just open it up and check it out.  Everything is clearly marked and commented so that you can understand 
+ * what you're allowed to overwrite.
+ *
+ * To be perfectly honest, you could probably get away with not adding a single line of CSS code if you really 
+ * go all out with some of the `functions.php` design options.
+ *
+ * Of course, use your best judgement with everything.  Have fun.  And, throw the rules out the window when 
+ * justified.
+ *
+ * If you make custom color/font changes that change the output of things in the post content, you'll want to 
+ * add those changes to a file called `editor-style.css` and place it within your child theme's `/css` folder. 
+ * It will automatically be loaded for you when a user is writing via the visual editor.
+ *
+ * images/headers/christmas-tree.jpg modified from photo by Dennis Hill, http://www.fontplay.com/freephotos/index.htm
+ */
+
+/**
+ * 665f54 - brown
+ * 8d8f57 - green
+ * c4555c - red
+ */
+
+body, .media-shortcode-extend .media-info {
+	color: #665f54;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+#site-title
+.entry h1,
+.entry h2,
+.entry h3,
+.entry h4,
+.entry h5 {
+	font-family: "Old Standard TT", "Times New Roman", serif;
+}
+
+.font-primary, body, input, textarea, .label-checkbox,
+.label-radio, .required, #site-description, #reply-title small {
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.entry-title,
+.entry-title a {
+	color: #8d8f57;
+}
+
+h1, h2, hr, code, pre, .form-allowed-tags code,
+fieldset, legend, input, select, textarea, .gallery .gallery-icon a img,
+.avatar, .display-header-text #header, .entry, .format-chat .chat-author,
+.media-info li, .loop-description, .loop-pagination, .loop-nav, #sidebar-subsidiary,
+li.ping, .comment-content, .clean-my-archives .day-duplicate .day,
+.whistles-tabs-nav li a, .whistles-tabs .whistles-tabs-nav li a:hover,
+.whistles-tabs .whistles-tabs-wrap, .whistles-toggle .whistle-title,
+.whistles-accordion .whistle-title, .whistles-toggle .whistle-content,
+.whistles-accordion .whistle-content {
+	border-color: #c7ac90;
+}
+
+#menu-primary, #menu-primary .search-form > div, #footer,
+.audio-shortcode-wrap, .media-shortcode-extend .media-info,
+.media-info-toggle, .entry-content .media-info-toggle,
+.wp-audio-shortcode.mejs-container, .mejs-controls, .mejs-volume-button .mejs-volume-slider,
+.mejs-overlay-play .mejs-overlay-button::after, .mejs-time-rail .mejs-time-float {
+	background: #665f54;
+}
+
+.search-form>div, #footer, .audio-shortcode-wrap,
+.media-shortcode-extend .media-info, .media-info-toggle,
+.entry-content .media-info-toggle, .wp-audio-shortcode.mejs-container,
+.mejs-controls, .mejs-volume-button .mejs-volume-slider,
+.mejs-overlay-play .mejs-overlay-button::after, .mejs-time-rail .mejs-time-float {
+	background: #665f54;
+	color: #8d8f57;
+}
+
+input[type="number"], input[type="date"], input[type="datetime"],
+input[type="datetime-local"], input[type="email"],
+input[type="month"], input[type="password"], input[type="search"],
+input[type="tel"], input[type="text"], input[type="time"],
+input[type="url"], input[type="week"], textarea, select {
+	background: #c7ac90;
+	border-color: #c7ac90;
+}
+
+@media only screen and (max-width: 799px) {
+	#menu-primary li a:hover, #menu-secondary li a:hover {
+		background: #665f54;
+	}
+	#menu-primary li a, #menu-secondary li a {
+		background: #8d8f57;
+		border-color: #8d8f57;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	#menu-primary ul ul li a:hover, #menu-secondary ul ul li a:hover {
+		background: #8d8f57;
+	}
+	#menu-primary li li a, #menu-secondary li li a {
+		background: #665f54;
+		border-color: #665f54;
+	}
+	.menu li > ul::before {
+		border-bottom-color: #665f54;
+	}
+	.ltr .menu li li > ul::before {
+		border-right-color: #665f54;
+	}
+}

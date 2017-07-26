@@ -1,0 +1,16 @@
+[23-Feb-2016 07:52:07 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 34
+[23-Feb-2016 07:52:07 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 38
+[23-Feb-2016 15:28:06 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 34
+[23-Feb-2016 15:28:06 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 38
+[23-Feb-2016 22:02:44 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 34
+[23-Feb-2016 22:02:44 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 38
+[24-Feb-2016 17:28:05 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 34
+[24-Feb-2016 17:28:05 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 38
+[04-Sep-2016 13:42:41 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 34
+[04-Sep-2016 13:42:41 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 38
+[05-Sep-2016 17:28:28 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 34
+[05-Sep-2016 17:28:28 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 38
+[09-Jan-2017 03:56:17 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 34
+[09-Jan-2017 03:56:17 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 38
+[10-Jan-2017 09:02:06 America/Denver] PHP Notice:  Undefined variable: slidedeck in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 34
+[10-Jan-2017 09:02:06 America/Denver] PHP Fatal error:  Using $this when not in object context in /home1/bubospec/public_html/shairab/wp-content/plugins/slidedeck2/sources/youtube/views/show.php on line 38

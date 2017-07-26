@@ -1,0 +1,26 @@
+.author_info {
+	border:1px dotted #666;
+	padding:1.0em;
+}
+.author_info a {
+	color:#cc0000;
+	border-bottom:1px dotted #fff;
+	text-decoration:none;
+}
+.author_info a:hover {
+	border-bottom:1px dotted #cc0000;
+}
+.author_info .author_photo img {
+	border:1px solid #666;
+	padding:0.2em;
+	float:left;
+	margin:1.0em 1.0em 1.0em 0em;
+}
+.author_info p {
+	margin-top:0.8em;
+	margin-bottom:0.4em;
+}
+.author_info p.author_email {
+	text-indent:1.8em;
+}
+.author_social_link img { max-width: 48px; max-height: 48px}
