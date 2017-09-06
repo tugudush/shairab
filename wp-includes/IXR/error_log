@@ -1,0 +1,10 @@
+[11-Aug-2017 20:23:07 America/Denver] PHP Fatal error:  Class 'IXR_Client' not found in /home1/bubospec/public_html/shairab/wp-includes/IXR/class-IXR-clientmulticall.php on line 9
+[11-Aug-2017 20:23:38 America/Denver] PHP Fatal error:  Class 'IXR_Server' not found in /home1/bubospec/public_html/shairab/wp-includes/IXR/class-IXR-introspectionserver.php on line 10
+[12-Aug-2017 03:34:16 America/Denver] PHP Fatal error:  Class 'IXR_Client' not found in /home1/bubospec/public_html/shairab/wp-includes/IXR/class-IXR-clientmulticall.php on line 9
+[12-Aug-2017 03:35:23 America/Denver] PHP Fatal error:  Class 'IXR_Server' not found in /home1/bubospec/public_html/shairab/wp-includes/IXR/class-IXR-introspectionserver.php on line 10
+[12-Aug-2017 06:14:17 America/Denver] PHP Fatal error:  Class 'IXR_Client' not found in /home1/bubospec/public_html/shairab/wp-includes/IXR/class-IXR-clientmulticall.php on line 9
+[12-Aug-2017 06:15:58 America/Denver] PHP Fatal error:  Class 'IXR_Server' not found in /home1/bubospec/public_html/shairab/wp-includes/IXR/class-IXR-introspectionserver.php on line 10
+[12-Aug-2017 11:30:19 America/Denver] PHP Fatal error:  Class 'IXR_Client' not found in /home1/bubospec/public_html/shairab/wp-includes/IXR/class-IXR-clientmulticall.php on line 9
+[12-Aug-2017 11:31:14 America/Denver] PHP Fatal error:  Class 'IXR_Server' not found in /home1/bubospec/public_html/shairab/wp-includes/IXR/class-IXR-introspectionserver.php on line 10
+[12-Aug-2017 18:10:51 America/Denver] PHP Fatal error:  Class 'IXR_Client' not found in /home1/bubospec/public_html/shairab/wp-includes/IXR/class-IXR-clientmulticall.php on line 9
+[12-Aug-2017 18:11:12 America/Denver] PHP Fatal error:  Class 'IXR_Server' not found in /home1/bubospec/public_html/shairab/wp-includes/IXR/class-IXR-introspectionserver.php on line 10
