@@ -8,124 +8,46 @@ function acx_fsmi_theme_array_filter_hook()
 } add_action('init','acx_fsmi_theme_array_filter_hook');
 function acx_fsmi_theme_array_filter_fn($acx_fsmi_themes_array)
 {
-		return $acx_fsmi_themes_array;
+	return $acx_fsmi_themes_array;
 } add_filter('acx_fsmi_theme_array_filter','acx_fsmi_theme_array_filter_fn',5);
 
 function acx_fsmi_theme_add_filter_fn($acx_fsmi_themes_array)
 {
-	$acx_fsmi_themes_array['0'] = array(
-			'id' => 0,
+	for($i = 0;$i < 30 ;$i++)
+	{
+		$acx_fsmi_themes_array[$i] = array(
+			'id' => $i,
 			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['1'] = array(
-			'id' => 1,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['2'] = array(
-			'id' => 2,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['3'] = array(
-			'id' => 3,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['4'] = array(
-			'id' => 4,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['5'] = array(
-			'id' => 5,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['6'] = array(
-			'id' => 6,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['7'] = array(
-			'id' => 7,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);$acx_fsmi_themes_array['8'] = array(
-			'id' => 8,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);$acx_fsmi_themes_array['9'] = array(
-			'id' => 9,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['10'] = array(
-			'id' => 10,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['11'] = array(
-			'id' => 11,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['12'] = array(
-			'id' => 12,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['13'] = array(
-			'id' => 13,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['14'] = array(
-			'id' => 14,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['15'] = array(
-			'id' => 15,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['16'] = array(
-			'id' => 16,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['17'] = array(
-			'id' => 17,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['18'] = array(
-			'id' => 18,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['19'] = array(
-			'id' => 19,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['20'] = array(
-			'id' => 20,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['21'] = array(
-			'id' => 21,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['22'] = array(
-			'id' => 22,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
-	$acx_fsmi_themes_array['23'] = array(
-			'id' => 23,
-			'path' => ACX_FSMI_BASE_LOCATION
-	);
+		);
+	}
 	return $acx_fsmi_themes_array;
 }
 add_filter('acx_fsmi_theme_array_filter','acx_fsmi_theme_add_filter_fn',55);
 function acx_fsmi_styles() 
 {	
-	wp_register_style('acx_fsmi_admin_style', plugins_url('css/style_admin.css', __FILE__));
+	wp_register_style('acx_fsmi_admin_style', plugins_url('css/style_admin.css?v='.ACX_FSMI_C_VERSION, __FILE__));
 	wp_enqueue_style('acx_fsmi_admin_style');
-
-	wp_register_style('acx_fsmi_box_style', plugins_url('css/layout.css', __FILE__));
+	
+	wp_register_style('acx_fsmiaddons_style', plugins_url('css/fsmi_addons.css?v='.ACX_FSMI_C_VERSION, __FILE__));
+	wp_enqueue_style('acx_fsmiaddons_style');
+	
+	wp_register_style('acx_fsmi_box_style', plugins_url('css/layout.css?v='.ACX_FSMI_C_VERSION, __FILE__));
 	wp_enqueue_style('acx_fsmi_box_style');
 }
 add_action('admin_enqueue_scripts', 'acx_fsmi_styles');
 function acx_fsmi_css()
 {
-	wp_register_style('acx_fsmi_styles', plugins_url('css/style.css', __FILE__));
+	wp_register_style('acx_fsmi_styles', plugins_url('css/style.css?v='.ACX_FSMI_C_VERSION, __FILE__));
 	wp_enqueue_style('acx_fsmi_styles');
 }
 add_action('admin_enqueue_scripts','acx_fsmi_css');
 add_action('wp_enqueue_scripts','acx_fsmi_css');
+function acx_si_custom_admin_js()
+{
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('jquery-ui-core');
+	wp_enqueue_script('jquery-ui-sortable');
+}	add_action( 'admin_enqueue_scripts', 'acx_si_custom_admin_js' );
 function print_acx_fsmi_option_heading($heading)
 {
 	$heading_format = "<h2 class='acx_fsmi_option_head'>";
@@ -164,13 +86,11 @@ function acx_fsmi_post_isset_check($field)
 
 function acx_fsmi_quick_form()
 {
-if(ISSET($_SERVER['HTTP_HOST']))
-{
-$acx_installation_url = $_SERVER['HTTP_HOST'];
-} else
-{
-$acx_installation_url = "";
-}
+	$acx_installation_url = "";
+	if(ISSET($_SERVER['HTTP_HOST']))
+	{
+		$acx_installation_url = $_SERVER['HTTP_HOST'];
+	}
 ?>
 <div class="acx_fsmi_es_common_raw acx_fsmi_es_common_bg">
 	<div class="acx_fsmi_es_middle_section">
@@ -178,7 +98,7 @@ $acx_installation_url = "";
     <div class="acx_fsmi_es_acx_content_area">
     	<div class="acx_fsmi_es_wp_left_area">
         <div class="acx_fsmi_es_wp_left_content_inner">
-        	<div class="acx_fsmi_es_wp_main_head"><?php _e('Do you Need Technical Support Services to Get the Best Out of Your Wordpress Site ?','floating-social-media-icon');?></div> <!-- wp_main_head -->
+        	<div class="acx_fsmi_es_wp_main_head"><?php _e('Get Expert Support For Your Website Needs Instantly','floating-social-media-icon');?></div> <!-- wp_main_head -->
             <div class="acx_fsmi_es_wp_sub_para_des"><?php _e('Acurax offer a number of WordPress related services: Form installing WordPress on your domain to offering support for existing WordPress sites.','floating-social-media-icon'); ?></div> <!-- acx_fsmi_es_wp_sub_para_des -->
             <div class="acx_fsmi_es_wp_acx_service_list">
             	<ul>
@@ -188,7 +108,7 @@ $acx_installation_url = "";
                     <li><?php _e('Explain Errors And Recommend Solutions','floating-social-media-icon'); ?></li>
                     <li><?php _e('Custom Plugin Development According To Your Needs','floating-social-media-icon'); ?></li>
                     <li><?php _e('Plugin Integration Support','floating-social-media-icon'); ?></li>
-                    <li><?php _e('Many','floating-social-media-icon'); ?> <a href="http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=expert_support" target="_blank"><?php _e('More...','floating-social-media-icon'); ?></a></li>
+                    <li><?php _e('Many','floating-social-media-icon'); ?> <a href="http://www.acurax.com/?utm_source=fsmi&utm_campaign=expert_support" target="_blank"><?php _e('More...','floating-social-media-icon'); ?></a></li>
                </ul>
             </div> <!-- acx_fsmi_es_wp_acx_service_list -->
             
@@ -270,62 +190,82 @@ add_action('acx_fsmi_troubleshoot_hook_option_footer','acx_fsmi_quick_form');
 
 function acx_quick_fsmi_request_submit_callback()
 {
-	
-	$acx_name =  $_POST['acx_name'];
-	$acx_email =  $_POST['acx_email'];
-	$acx_phone =  $_POST['acx_phone'];
-	$acx_weburl =  $_POST['acx_weburl'];
-	$acx_subject =  $_POST['acx_subject'];
-	$acx_question =  $_POST['acx_question'];
-	$acx_smw_es = $_POST['acx_smw_es'];
+	$acx_name =  $acx_email =  $acx_phone =  $acx_weburl = $acx_subject = $acx_question = $acx_smw_es = "";
+	if(ISSET($_POST['acx_name']))
+	{
+		$acx_name =  $_POST['acx_name'];
+	}
+	if(ISSET($_POST['acx_email']))
+	{
+		$acx_email =  $_POST['acx_email'];
+	}
+	if(ISSET($_POST['acx_phone']))
+	{
+		$acx_phone =  $_POST['acx_phone'];
+	}
+	if(ISSET($_POST['acx_weburl']))
+	{
+		$acx_weburl =  $_POST['acx_weburl'];
+	}
+	if(ISSET($_POST['acx_subject']))
+	{
+		$acx_subject =  $_POST['acx_subject'];
+	}
+	if(ISSET($_POST['acx_question']))
+	{
+		$acx_question =  $_POST['acx_question'];
+	}
+	if(ISSET($_POST['acx_smw_es']))
+	{
+		$acx_smw_es = $_POST['acx_smw_es'];
+	}
 	if (!wp_verify_nonce($acx_smw_es,'acx_smw_es'))
 	{
-	$acx_smw_es == "";
+		$acx_smw_es == "";
 	}
 	if(!current_user_can('manage_options'))
 	{
-	$acx_smw_es == "";
+		$acx_smw_es == "";
 	}
-if($acx_smw_es == "" || $acx_name == "" || $acx_email == "" || $acx_phone == "" || $acx_weburl == "" || $acx_subject == "" || $acx_question == "")
-{
-echo 2;
-} else
-{
-$current_user_acx = wp_get_current_user();
-$current_user_acx = $current_user->user_email;
-if($current_user_acx == "")
-{
-$current_user_acx = $acx_email;
-}
-$headers[] = "from: ". $acx_name . ' <' . $current_user_acx . '>';
-$headers[] = "Content-Type: text/html; charset=UTF-8"; 
-$message = "Name: ".$acx_name . "\r\n <br>";
-$message = $message ."E-mail: ".$acx_email . "\r\n <br>";
-if($acx_phone != "")
-{
-$message = $message ."Phone: ".$acx_phone . "\r\n <br>";
-}
-// In case any of our lines are larger than 70 characters, we should use wordwrap()
-$acx_question = wordwrap($acx_question, 70, "\r\n <br>");
-$message = $message ."Request From: fsmi - Expert Help Request Form  \r\n <br>"; 
-$message = $message . "Website:".$acx_weburl . "\r\n <br>";
-$message = $message . "Question:" .$acx_question . "\r\n <br>";
-$message = stripslashes($message);
-$acx_subject = "Quick support - " . $acx_subject;
-$emailed = wp_mail( 'info@acurax.com', $acx_subject, $message, $headers );
-if($emailed)
-{
-echo 1;
-} else
-{
-echo 0;
-}
-}
+	if($acx_smw_es == "" || $acx_name == "" || $acx_email == "" || $acx_phone == "" || $acx_weburl == "" || $acx_subject == "" || $acx_question == "")
+	{
+		echo 2;
+	}
+	else
+	{
+		$current_user_acx = wp_get_current_user();
+		$current_user_acx = $current_user->user_email;
+		if($current_user_acx == "")
+		{
+			$current_user_acx = $acx_email;
+		}
+		$headers[] = "from: ". $acx_name . ' <' . $current_user_acx . '>';
+		$headers[] = "Content-Type: text/html; charset=UTF-8"; 
+		$message = "Name: ".$acx_name . "\r\n <br>";
+		$message = $message ."E-mail: ".$acx_email . "\r\n <br>";
+		if($acx_phone != "")
+		{
+			$message = $message ."Phone: ".$acx_phone . "\r\n <br>";
+		}
+		// In case any of our lines are larger than 70 characters, we should use wordwrap()
+		$acx_question = wordwrap($acx_question, 70, "\r\n <br>");
+		$message = $message ."Request From: FSMI - Expert Help Request Form  \r\n <br>"; 
+		$message = $message . "Website:".$acx_weburl . "\r\n <br>";
+		$message = $message . "Question:" .$acx_question . "\r\n <br>";
+		$message = stripslashes($message);
+		$acx_subject = "Plugin Support - " . $acx_subject;
+		$emailed = wp_mail( 'info@acurax.com', $acx_subject, $message, $headers );
+		if($emailed)
+		{
+			echo 1;
+		}
+		else
+		{
+			echo 0;
+		}
+	}
 	die(); // this is required to return a proper result
 }add_action('wp_ajax_acx_quick_fsmi_request_submit','acx_quick_fsmi_request_submit_callback');
-
-
-
 
 //*************** Include style.css in Header ********
 // Getting Option From DB *****************************	
@@ -339,6 +279,7 @@ $acx_si_linkedin = get_option('acx_si_linkedin');
 $acx_si_gplus = get_option('acx_si_gplus');
 $acx_si_pinterest = get_option('acx_si_pinterest');
 $acx_si_feed = get_option('acx_si_feed');
+$acx_si_instagram = get_option('acx_si_instagram');
 $acx_si_icon_size = get_option('acx_si_icon_size');
 $acx_si_fsmi_float_fix = get_option('acx_si_fsmi_float_fix');
 $acx_si_fsmi_theme_warning_ignore = get_option('acx_si_fsmi_theme_warning_ignore');
@@ -352,8 +293,8 @@ $social_icon_array_order = unserialize($social_icon_array_order);
 
 function acx_fsmi_orderarray_refresh()
 {
-global $social_icon_array_order;
-/* Starting The Logic Count and Re Configuring Order Array */	
+	global $social_icon_array_order;
+	/* Starting The Logic Count and Re Configuring Order Array */	
 	$total_arrays = ACX_FSMI_TOTAL_STATIC_SERVICES; // Number Of Static Services ,<< Earlier its 10
 	if(is_serialized($social_icon_array_order))
 	{
@@ -396,7 +337,7 @@ global $social_icon_array_order;
 			$acx_temp_array = $social_icon_array_order;
 			foreach ($social_icon_array_order as $key => $value)
 			{
-				if($social_icon_array_order[$key]>=$total_arrays)
+				if($social_icon_array_order[$key]>=$total_arrays || !is_numeric($value))
 				{
 					unset($acx_temp_array[$key]);
 				}
@@ -412,29 +353,22 @@ global $social_icon_array_order;
 	} // else closing of if array null
 /* Ending The Logic Count and Re Configuring Order Array */	
 }
-add_action('acx_fsmi_array_refresh','acx_fsmi_orderarray_refresh',50);
-// Check Credit Link
-
-// Options Value Checker
-function check_acx_credit($yes,$no)
-{ 	$acx_si_credit = get_option('acx_si_credit');
-	if($acx_si_credit != "no") { echo $yes; } else { echo $no; } 
+function acx_fsmi_array_refresh_hook()
+{
+	add_action('acx_fsmi_array_refresh','acx_fsmi_orderarray_refresh',50);
 }
+add_action("init","acx_fsmi_array_refresh_hook");
 
 function acurax_si_simple($acx_array) // Added Default "" // Updated << and V (alt added to Images Title Added to Links)
 {
 	// Getting Globals *****************************	
 	global $acx_si_theme, $acx_si_credit, $acx_si_display , $acx_si_twitter, $acx_si_facebook, $acx_si_youtube, 		
-	$acx_si_linkedin, $acx_si_gplus, $acx_si_pinterest, $acx_si_feed, $acx_si_icon_size;
+	$acx_si_linkedin, $acx_si_gplus, $acx_si_pinterest, $acx_si_feed,$acx_si_instagram, $acx_si_icon_size;
 	// *****************************************************
-	
+	$theme = $size = '';
 	if(is_array($acx_array) && array_key_exists('theme',$acx_array))
 	{
 		$theme = $acx_array['theme'];	
-	}
-	else
-	{
-		$theme = '';
 	}
 	if(empty($acx_array))
 	{
@@ -447,18 +381,14 @@ function acurax_si_simple($acx_array) // Added Default "" // Updated << and V (a
 	{
 		$size = $acx_array['size'];	
 	}
-	else
-	{
-		$size = '';
-	}
 	if($size == "")
 	{
-	$size = $acx_si_icon_size;
+		$size = $acx_si_icon_size;
 	}
 	if($size != "")
 	{
-	$size = $size."px";
-	$acx_si_icon_height_width_attribute = "height='".$size."' width='".$size."'";
+		$size = $size."px";
+		$acx_si_icon_height_width_attribute = "height='".$size."' width='".$size."'";
 	} else
 	{
 	$acx_si_icon_height_width_attribute = "";
@@ -508,14 +438,22 @@ function acurax_si_simple($acx_array) // Added Default "" // Updated << and V (a
 			$alt_text_feed =  __('Check Our Feed','floating-social-media-icon');
 			$feed_link = "<a href='". $acx_si_feed ."' target='_blank' ".$acx_si_fsmi_rel." title='".$alt_text_feed."'>" . "<img src='".ACX_FSMI_BASE_LOCATION."images/themes/". $acx_si_touse_theme ."/feed.png' style='border:0px;' alt='".$alt_text_feed."' ".$acx_si_icon_height_width_attribute." /></a>";
 		}
+		if	($acx_si_instagram == "") { $instagram_link = ""; } else 
+		{
+			$alt_text_instagram =  __('Visit Us On Instagram','floating-social-media-icon');
+			$instagram_link = "<a href='". $acx_si_instagram ."' target='_blank' ".$acx_si_fsmi_rel." title='".$alt_text_instagram."'>" . "<img src='".ACX_FSMI_BASE_LOCATION."images/themes/". $acx_si_touse_theme ."/instagram.png' style='border:0px;' alt='".$alt_text_instagram."' ".$acx_si_icon_height_width_attribute." /></a>";
+		}
+		
+		
+		
 	$social_icon_array_order = get_option('social_icon_array_order');
 	if(is_serialized($social_icon_array_order))
 	{
-	$social_icon_array_order = unserialize($social_icon_array_order);
+		$social_icon_array_order = unserialize($social_icon_array_order);
 	}
 	if($social_icon_array_order == "")
 	{
-	$social_icon_array_order = array();
+		$social_icon_array_order = array();
 	}
 	$html = '' ;
 	foreach ($social_icon_array_order as $key => $value)
@@ -528,6 +466,8 @@ function acurax_si_simple($acx_array) // Added Default "" // Updated << and V (a
 		else if ($value == 5) {  $html .=  $linkedin_link; } 
 		
 		else if ($value == 6) {  $html .=  $feed_link; }
+		else if ($value == 7) {  $html .=  $instagram_link; }
+	
 	}
 	$html = apply_filters('acx_fsmip_si_simple',$acx_array,$html);
 
@@ -591,10 +531,10 @@ add_action('admin_notices', 'acx_theme_check_wp_footer');
 function acurax_icons()
 {
 	global $acx_si_theme, $acx_si_credit, $acx_si_display , $acx_si_twitter, $acx_si_facebook, $acx_si_youtube, 		
-	$acx_si_linkedin, $acx_si_gplus, $acx_si_pinterest, $acx_si_feed, $acx_si_icon_size;
+	$acx_si_linkedin, $acx_si_gplus, $acx_si_pinterest, $acx_si_feed,$acx_si_instagram,$acx_si_icon_size;
 			
 	if($acx_si_twitter != "" || $acx_si_facebook != "" || $acx_si_youtube != "" || $acx_si_linkedin != ""  || 
-	$acx_si_pinterest != "" || $acx_si_gplus != "" || $acx_si_feed != "")
+	$acx_si_pinterest != "" || $acx_si_gplus != "" || $acx_si_feed != "" || $acx_si_instagram != "" )
 	{
 	//*********************** STARTED DISPLAYING THE ICONS ***********************
 		echo "\n\n\n<!-- Starting Icon Display Code For Social Media Icon From Acurax International www.acurax.com -->\n";
@@ -622,41 +562,47 @@ function acx_load_floating_js()
 	$acx_si_icon_size = get_option('acx_si_icon_size');
 	////////////////////////////////////////////////////////////////////////////
 	//STARTING CROSS CHECK			    $count,$icon_size,$set_value  
-	function acx_si_check_loaded_count($count,$icon_size,$set_x_value,$set_y_value)
+	if (!function_exists('acx_si_check_loaded_count')) 
 	{
-		// Defining Values To Use
-		$acx_si_icon_size = get_option('acx_si_icon_size'); // Getting Value From DB :)
-		$acx_si_twitter = get_option('acx_si_twitter');
-		$acx_si_facebook = get_option('acx_si_facebook');
-		$acx_si_youtube = get_option('acx_si_youtube');
-		$acx_si_linkedin = get_option('acx_si_linkedin');
-		$acx_si_feed = get_option('acx_si_feed');
-		$acx_si_gplus = get_option('acx_si_gplus');
-		$acx_si_pinterest = get_option('acx_si_pinterest');
-		$count_check = 0;
-		$l1 = 0;
-		$l2 = 0;
-		$l3 = 0;
-		$l4 = 0;
-		$l5 = 0;
-		$l6 = 0;
-		$l7 = 0;
-		if ($acx_si_twitter != "") { $l1 = 1; }
-		if ($acx_si_facebook != "") { $l2 = 1; }
-		if ($acx_si_youtube != "") { $l3 = 1; }
-		if ($acx_si_linkedin != "") { $l4 = 1; }
-		if ($acx_si_gplus != "") { $l5 = 1; }
-		if ($acx_si_pinterest != "") { $l6 = 1; }
-		if ($acx_si_feed != "") { $l7 = 1; }
-		$count_check = $l1 + $l2 + $l3 + $l4 + $l5 + $l6 + $l7;
-		if ($acx_si_icon_size == $icon_size && $count_check == $count)
+		function acx_si_check_loaded_count($count,$icon_size,$set_x_value,$set_y_value)
 		{
-			global $x;
-			global $y;
-			$x = $set_x_value;
-			$y = $set_y_value;
-		}
-	} // ENDING THE FUNCTION TO CROS CHECK
+			// Defining Values To Use
+			$acx_si_icon_size = get_option('acx_si_icon_size'); // Getting Value From DB :)
+			$acx_si_twitter = get_option('acx_si_twitter');
+			$acx_si_facebook = get_option('acx_si_facebook');
+			$acx_si_youtube = get_option('acx_si_youtube');
+			$acx_si_linkedin = get_option('acx_si_linkedin');
+			$acx_si_feed = get_option('acx_si_feed');
+			$acx_si_instagram = get_option('acx_si_instagram');
+			$acx_si_gplus = get_option('acx_si_gplus');
+			$acx_si_pinterest = get_option('acx_si_pinterest');
+			$count_check = 0;
+			$l1 = 0;
+			$l2 = 0;
+			$l3 = 0;
+			$l4 = 0;
+			$l5 = 0;
+			$l6 = 0;
+			$l7 = 0;
+			$l8 = 0;
+			if ($acx_si_twitter != "") { $l1 = 1; }
+			if ($acx_si_facebook != "") { $l2 = 1; }
+			if ($acx_si_youtube != "") { $l3 = 1; }
+			if ($acx_si_linkedin != "") { $l4 = 1; }
+			if ($acx_si_gplus != "") { $l5 = 1; }
+			if ($acx_si_pinterest != "") { $l6 = 1; }
+			if ($acx_si_feed != "") { $l7 = 1; }
+			if ($acx_si_instagram != "") { $l8 = 1; }
+			$count_check = $l1 + $l2 + $l3 + $l4 + $l5 + $l6 + $l7 + $l8;
+			if ($acx_si_icon_size == $icon_size && $count_check == $count)
+			{
+				global $x;
+				global $y;
+				$x = $set_x_value;
+				$y = $set_y_value;
+			}
+		} // ENDING THE FUNCTION TO CROS CHECK
+	}
 	/**************************************************************************
 	CONDITIONS STARTING HERE  
 	if X Decreases then move to Right
@@ -670,6 +616,7 @@ function acx_load_floating_js()
 	acx_si_check_loaded_count(5,16,-170,-35);
 	acx_si_check_loaded_count(6,16,-170,-35);
 	acx_si_check_loaded_count(7,16,-170,-35);
+	acx_si_check_loaded_count(8,16,-170,-35);
 	// *********************************
 	// Icon Size 25 Starts Here
 	acx_si_check_loaded_count(1,25,-160,-50);
@@ -679,6 +626,7 @@ function acx_load_floating_js()
 	acx_si_check_loaded_count(5,25,-160,-50);
 	acx_si_check_loaded_count(6,25,-180,-50);
 	acx_si_check_loaded_count(7,25,-180,-50);
+	acx_si_check_loaded_count(8,25,-180,-50);
 	// *********************************
 	// Icon Size 32 Starts Here
 	acx_si_check_loaded_count(1,32,-170,-55);
@@ -688,6 +636,7 @@ function acx_load_floating_js()
 	acx_si_check_loaded_count(5,32,-190,-70);
 	acx_si_check_loaded_count(6,32,-160,-80);
 	acx_si_check_loaded_count(7,32,-160,-80);
+	acx_si_check_loaded_count(8,32,-160,-80);
 	// *********************************
 	// Icon Size 40 Starts Here
 	acx_si_check_loaded_count(1,40,-170,-65);
@@ -697,6 +646,7 @@ function acx_load_floating_js()
 	acx_si_check_loaded_count(5,40,-170,-105);
 	acx_si_check_loaded_count(6,40,-170,-105);
 	acx_si_check_loaded_count(7,40,-170,-145);
+	acx_si_check_loaded_count(8,40,-170,-145);
 	// *********************************
 	// Icon Size 48 Starts Here
 	acx_si_check_loaded_count(1,48,-170,-75);
@@ -706,6 +656,7 @@ function acx_load_floating_js()
 	acx_si_check_loaded_count(5,48,-170,-120);
 	acx_si_check_loaded_count(6,48,-170,-120);
 	acx_si_check_loaded_count(7,48,-170,-175);
+	acx_si_check_loaded_count(8,48,-170,-175);
 	// *********************************
 	// Icon Size 55 Starts Here
 	acx_si_check_loaded_count(1,55,-170,-80);
@@ -715,6 +666,7 @@ function acx_load_floating_js()
 	acx_si_check_loaded_count(5,55,-190,-135);
 	acx_si_check_loaded_count(6,55,-190,-135);
 	acx_si_check_loaded_count(7,55,-190,-200);
+	acx_si_check_loaded_count(8,55,-190,-200);
 	// *********************************
 	/**************************************************************************
 	CONDITIONS ENDING HERE
@@ -761,18 +713,18 @@ function acx_load_floating_js()
 function pbl_footer() 
 {
 	global $acx_si_theme, $acx_si_credit, $acx_si_display , $acx_si_twitter, $acx_si_facebook, $acx_si_youtube, 		
-	$acx_si_linkedin, $acx_si_gplus, $acx_si_pinterest, $acx_si_feed;
+	$acx_si_linkedin, $acx_si_gplus, $acx_si_pinterest, $acx_si_feed,$acx_si_instagram;
 	//********** CHECKING CREDIT LINK STATUS ******************
-	if($acx_si_twitter != "" || $acx_si_facebook != "" || $acx_si_youtube != "" || $acx_si_linkedin != ""  || $acx_si_pinterest != "" || $acx_si_gplus != "" || $acx_si_feed != "")
+	if($acx_si_twitter != "" || $acx_si_facebook != "" || $acx_si_youtube != "" || $acx_si_linkedin != ""  || $acx_si_pinterest != "" || $acx_si_gplus != "" || $acx_si_feed != "" || $acx_si_instagram != "")
 	{
 		
 		if($acx_si_credit == "yes") 
 		{ 
-			$acx_fsmi_bl_style="text-align:center;color:gray;font-family:arial;font-size:12px;text-decoration:none;";
+			$acx_fsmi_bl_style="text-align:center;font-family:arial;font-size:12px;text-decoration:none;";
 			echo "<div style='".$acx_fsmi_bl_style."'>";
 			$acx_get_url = "http://";
 			$acx_get_url .= $_SERVER['HTTP_HOST'];
-			$acx_get_url .= $_SERVER['REQUEST_URI'];
+			$acx_get_url .= esc_url($_SERVER['REQUEST_URI']);
 			$acx_installation_domain = $_SERVER['HTTP_HOST'];
 			$acx_installation_domain = str_replace("www.","",$acx_installation_domain);
 			$acx_installation_domain = str_replace(".","_",$acx_installation_domain);
@@ -780,36 +732,40 @@ function pbl_footer()
 			$x = strlen($acx_get_url);
 			if(($x % 10) == 0)
 			{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='Popular Social Media Wordpress Plugin' style='".$acx_fsmi_bl_style."'>".__('Animated Social Media Icons','floating-social-media-icon')."</a> Powered by <a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Popular Wordpress Development Company' style='".$acx_fsmi_bl_style."'>".__('Acurax Wordpress Development Company','floating-social-media-icon')."</a>";
-} else if(($x % 9) == 0)
-{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='Floating Social Media Wordpress plugin' style='".$acx_fsmi_bl_style."'>".__('Floating Social Media Icons','floating-social-media-icon')."</a> ".__('Powered by ','floating-social-media-icon')."<a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Blog Design Company' style='".$acx_fsmi_bl_style."'>".__('Acurax Blog Designing Company','floating-social-media-icon')."</a>";
-} else if(($x % 8) == 0)
-{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='Social Media Plugin' style='".$acx_fsmi_bl_style."'>Social Media Integration</a>".__(' Powered by','floating-social-media-icon')." <a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Acurax Web Design Company' style='".$acx_fsmi_bl_style."'>".__('Acurax Wordpress Theme Designers','floating-social-media-icon')."</a>";
-} else if(($x % 7) == 0)
-{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='Social Media Wordpress plugin' style='".$acx_fsmi_bl_style."'>".__('Social Media Icons','floating-social-media-icon')."</a>". __(' Powered by ','floating-social-media-icon')."<a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Affordable Website Designer' style='".$acx_fsmi_bl_style."'>".__('Acurax Website Designing Company','floating-social-media-icon')."</a>";
-} else if(($x % 6) == 0)
-{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='SocialMedia Wordpress plugin' style='".$acx_fsmi_bl_style."'>". __('Social Media Icons','floating-social-media-icon')."</a>". __(' Powered by','floating-social-media-icon')." <a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Web Development Company' style='".$acx_fsmi_bl_style."'>".__('Acurax Web Development Company','floating-social-media-icon')."</a>";} else if(($x % 5) == 0)
-{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='Social Media Wordpress plugin' style='".$acx_fsmi_bl_style."'>". __('Social Media Icons','floating-social-media-icon')."</a> ". __(' Powered by ','floating-social-media-icon')."<a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Website Redesign Experts' style='".$acx_fsmi_bl_style."'>".__('Acurax Website Redesign Experts','floating-social-media-icon')."</a>";} else if(($x % 4) == 0)
-{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='Social Media Wordpress plugin' style='".$acx_fsmi_bl_style."'>". __('Social Media Icons','floating-social-media-icon')."</a> ". __('Powered by','floating-social-media-icon')." <a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Social Profile Design Experts' style='".$acx_fsmi_bl_style."'>". __('Acurax Social Profile Design Experts','floating-social-media-icon')."</a>";
-} else if(($x % 3) == 0)
-{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='Social Media Wordpress plugin' style='".$acx_fsmi_bl_style."'>". __('Social Media Icons','floating-social-media-icon')."</a>". __(' Powered by ','floating-social-media-icon')."<a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Wordpress Development Company' style='".$acx_fsmi_bl_style."'>". __('Acurax Wordpress Development Company','floating-social-media-icon')."</a>";
-} else if(($x % 2) == 0)
-{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='Social Media Wordpress plugin' style='".$acx_fsmi_bl_style."'>". __('Social Media Icons','floating-social-media-icon')."</a>". __(' Powered by ','floating-social-media-icon')."<a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Web Design Company' style='".$acx_fsmi_bl_style."'>". __('Acurax Web Design Company','floating-social-media-icon')."</a>";
-} else if(($x % 1) == 0)
-{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='Social Media Wordpress plugin' style='".$acx_fsmi_bl_style."'>". __('Animated Social Media Icons','floating-social-media-icon')."</a>". __(' Powered by','floating-social-media-icon')." <a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Wordpress Development Company' style='".$acx_fsmi_bl_style."'>". __('Acurax Wordpress Development Company','floating-social-media-icon')."</a>";
-} else 
-{
-echo "<a href='http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/' target='_blank' title='Social Media Wordpress plugin' style='".$acx_fsmi_bl_style."'>". __('Social Media Icons','floating-social-media-icon')."</a> ". __('Powered by','floating-social-media-icon')." <a href='http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=blink' target='_blank' title='Ecommerce Design Expert' style='".$acx_fsmi_bl_style."'>". __('Acurax E-Commerce Website Design Company','floating-social-media-icon')."</a>";
-}
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>".__('Animated Social Media Icons','floating-social-media-icon')."</a> ".__(' by ','floating-social-media-icon')."<a href='http://www.acurax.com/webdesigning/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>".__('Acurax Wordpress Development Company','floating-social-media-icon')."</a>";
+			} else if(($x % 9) == 0)
+			{
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>".__('Floating Social Media Icons','floating-social-media-icon')."</a> ".__(' by ','floating-social-media-icon')."<a href='http://www.acurax.com/webdesigning/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>".__('Acurax Wordpress Designers','floating-social-media-icon')."</a>";
+			} else if(($x % 8) == 0)
+			{
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>".__('Social Media Integration','floating-social-media-icon')."</a>".__(' by ','floating-social-media-icon')." <a href='http://www.acurax.com/webdesigning/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>".__('Acurax Wordpress Developers','floating-social-media-icon')."</a>";
+			} else if(($x % 7) == 0)
+			{
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>".__('Plugin for Social Media','floating-social-media-icon')."</a>". __('  by ','floating-social-media-icon')."<a href='http://www.acurax.com/webdesigning/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>".__('Acurax Wordpress Design Studio','floating-social-media-icon')."</a>";
+			} else if(($x % 6) == 0)
+			{
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>". __('Social Media Widget','floating-social-media-icon')."</a>". __(' Powered by','floating-social-media-icon')." <a href='http://www.acurax.com/webdevelopment/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>".__('Acurax Web Development Company','floating-social-media-icon')."</a>";
+			}
+			else if(($x % 5) == 0)
+			{
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>". __('Social Media Icons','floating-social-media-icon')."</a> ". __(' Powered by ','floating-social-media-icon')."<a href='http://www.acurax.com/webdesigning/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>".__('Acurax Web Design Company','floating-social-media-icon')."</a>";
+			} 
+			else if(($x % 4) == 0)
+			{
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>". __('Social Network Integration','floating-social-media-icon')."</a> ". __(' by','floating-social-media-icon')." <a href='http://www.acurax.com/social-profile-design/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>". __('Acurax Social Media Branding Company','floating-social-media-icon')."</a>";
+			} else if(($x % 3) == 0)
+			{
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>". __('Social Network Widget','floating-social-media-icon')."</a>". __('  by ','floating-social-media-icon')."<a href='http://www.acurax.com/web-solution-consultation/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>". __('Acurax Small Business Website Designers','floating-social-media-icon')."</a>";
+			} else if(($x % 2) == 0)
+			{
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>". __('Customized Social Media Icons','floating-social-media-icon')."</a>". __(' from ','floating-social-media-icon')."<a href='http://www.acurax.com/digital-marketing/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>". __('Acurax Digital Marketing Agency','floating-social-media-icon')."</a>";
+			} else if(($x % 1) == 0)
+			{
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>". __('Animated Social Media Icons','floating-social-media-icon')."</a>". __(' by','floating-social-media-icon')." <a href='http://www.acurax.com/webdesigning/?utm_source=fsmi&utm_campaign=blink' target='_blank'  style='".$acx_fsmi_bl_style."'>". __('Acurax Responsive Web Designing Company','floating-social-media-icon')."</a>";
+			} else 
+			{
+			echo "<a href='http://www.acurax.com/products/floating-social-media-icon-wordpress-plugin/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>". __('SocialMedia Integration','floating-social-media-icon')."</a> ". __('Powered by','floating-social-media-icon')." <a href='http://www.acurax.com/ecommerce/?utm_source=fsmi&utm_campaign=blink' target='_blank' style='".$acx_fsmi_bl_style."'>". __('Acurax ecommerce Website Design Company','floating-social-media-icon')."</a>";
+			}
 			// Ending Crediting
 			echo "</div>";
 		} 
@@ -890,7 +846,8 @@ function DISPLAY_ACURAX_ICONS_SC($atts)
 		echo "<div id='short_code_si_icon' style='text-align:".$align.";' class='acx_fsmi_float_fix scid-" . $acx_si_sc_id . "'>"; // updated
 		$acx_to_pass_array = array(
 		'theme' => $theme,
-		'size'  => $size
+		'size'  => $size,
+		'align'  => $align
 		);
 		echo  acurax_si_simple($acx_to_pass_array);
 		echo "</div>";
@@ -901,7 +858,7 @@ function DISPLAY_ACURAX_ICONS_SC($atts)
 	else echo "<!-- Select Display Mode as Manual To Show The Acurax Social Media Icons -->";
 } // DISPLAY_ACURAX_ICONS_SC
 //DISPLAY_ACURAX_ICONS();
-function DISPLAY_ACURAX_ICONS($theme="",$size="",$function="",$animation="",$opacity="",$align="")
+function DISPLAY_ACURAX_ICONS($theme="",$size="",$align="",$function="",$animation="",$opacity="")
 {
 	$acx_html = '';
 	global $acx_si_display, $acx_si_icon_size,$acx_fsmi_themes_array;
@@ -933,7 +890,6 @@ function DISPLAY_ACURAX_ICONS($theme="",$size="",$function="",$animation="",$opa
 		'animation' => $animation,
 		'opacity' => $opacity
 		);
-		
 	if ($acx_si_display != "auto" || $acx_si_display == "both") 
 	{
 		$acx_html .= "\n\n\n<!-- Starting Styles For Social Media Icon (PHP CODE) From Acurax International www.acurax.com 
@@ -946,7 +902,7 @@ function DISPLAY_ACURAX_ICONS($theme="",$size="",$function="",$animation="",$opa
 		$acx_html .= "<div id='short_code_si_icon' style='text-align:".$align.";'>";
 		$acx_html .= acurax_si_simple($acx_to_pass_array);
 		$acx_html .= "</div>";
-	} 
+	}
 	else $acx_html .= "<!-- Select Display Mode as Manual To Show The Acurax Social Media Icons -->";
 	
 	$acx_html = apply_filters('acx_fsmip_display_icons_php',$acx_to_pass_array,$acx_html);
@@ -957,7 +913,7 @@ function filter_acx_fsmip_display_icons($acx_to_pass_array,$acx_html)
 {
 	return $acx_html;
 }
-add_filter('acx_fsmip_display_icons_php','filter_acx_fsmip_display_icons',10,2);
+ add_filter('acx_fsmip_display_icons_php','filter_acx_fsmip_display_icons',100,2);
 		
 function acx_not_auto()
 {
@@ -971,17 +927,12 @@ else
 {
 	add_shortcode( 'DISPLAY_ACURAX_ICONS', 'acx_not_auto' ); // Defining Shortcode to show Select Manual
 }    
-function acx_si_custom_admin_js()
-{
-	wp_enqueue_script('jquery');
-	wp_enqueue_script('jquery-ui-core');
-	wp_enqueue_script('jquery-ui-sortable');
-}	add_action( 'admin_enqueue_scripts', 'acx_si_custom_admin_js' );
+
 // wp-admin Notices >> Finish Upgrade
 //-- **************** CODE TO FIND PAGE STARTS HERE ********************************
 if(ISSET($_GET['page']))
 {
-$acx_si_current_page = $_GET['page'];
+$acx_si_current_page = sanitize_text_field(trim($_GET['page']));
 } else
 {
 $acx_si_current_page = "";
@@ -989,7 +940,11 @@ $acx_si_current_page = "";
 //-- **************** CODE TO FIND PAGE ENDS HERE***********************************
 $total_arrays = ACX_FSMI_TOTAL_STATIC_SERVICES; // Number Of Services
 $social_icon_array_order = get_option('social_icon_array_order');
-$social_icon_array_order = unserialize($social_icon_array_order);
+if(is_serialized($social_icon_array_order))
+{
+	$social_icon_array_order = unserialize($social_icon_array_order);
+}
+
 $social_icon_array_count = count($social_icon_array_order); 
 if ($social_icon_array_count < $total_arrays) 
 {
@@ -1009,7 +964,7 @@ function acx_si_pluign_not_configured()
 }
 if ($social_icon_array_count == $total_arrays) 
 {
-	if ($acx_si_twitter == "" && $acx_si_facebook == "" && $acx_si_youtube == "" && $acx_si_linkedin == ""  && $acx_si_pinterest == "" && $acx_si_gplus == "" && $acx_si_feed == "")
+	if ($acx_si_twitter == "" && $acx_si_facebook == "" && $acx_si_youtube == "" && $acx_si_linkedin == ""  && $acx_si_pinterest == "" && $acx_si_gplus == "" && $acx_si_feed == "" && $acx_si_instagram == "")
 	{
 		if($acx_si_current_page != "Acurax-Social-Icons-Settings")
 		{
@@ -1049,19 +1004,19 @@ $acx_fsmi_days_till_today_from_install = time()-$acx_si_installed_date;
 $acx_fsmi_days_till_today_from_install = round(($acx_fsmi_days_till_today_from_install/60/60/24))." Days";
 
 global $current_user;
-get_currentuserinfo();
+//get_currentuserinfo();
+wp_get_current_user();
 $acx_fsmi_current_user = $current_user->display_name;
 if($acx_fsmi_current_user == "")
 {
 $acx_fsmi_current_user = "Webmaster";
 }
 
-    echo '<div id="acx_td_fsmi" class="notice">'. __("Hey","floating-social-media-icon").' <b>'.$acx_fsmi_current_user.'</b>'. __(", Do you know? You were using Floating Social Media Icon Wordpress Plugin for the last","floating-social-media-icon").' <b>'.$acx_fsmi_days_till_today_from_install.'</b>'. __(", We are sure, your visitors loved the flying icons.","floating-social-media-icon").'<br>'. __("From the bottom of our heart, we the team @ ","floating-social-media-icon").'<a href="http://wordpress.acurax.com/?utm_source=fsmi&utm_campaign=days" style="font-weight: normal; margin-left: 0px; color: rgb(68, 68, 68);" target="_blank">'. __("Acurax Technologies","floating-social-media-icon").'</a>'. __(" thank you for being with us, and we appreciate your feedback,reviews and support.","floating-social-media-icon").'<br><a href="https://wordpress.org/support/view/plugin-reviews/floating-social-media-icon?filter=5" target="_blank">'. __("Rate 5★'s on wordpress","floating-social-media-icon").'</a><a href="https://twitter.com/share?url=http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/&text='.$acx_tweet_text.' -" target="_blank">'. __("Tell Your Followers","floating-social-media-icon").'</a><a href="admin.php?page=Acurax-Social-Icons-Premium">'. __("Premium Version Benefits","floating-social-media-icon").'</a><a href="admin.php?page=Acurax-Social-Icons-Premium&td=hide">'. __("Hide for Now","floating-social-media-icon").'</a></div>';
+    echo '<div id="acx_td_fsmi" class="notice">'. __("Hey","floating-social-media-icon").' <b>'.$acx_fsmi_current_user.'</b>'. __(", Do you know? You were using Floating Social Media Icon Wordpress Plugin for the last","floating-social-media-icon").' <b>'.$acx_fsmi_days_till_today_from_install.'</b>'. __(", We are sure, your visitors loved the flying icons.","floating-social-media-icon").'<br>'. __("From the bottom of our heart, we the team @ ","floating-social-media-icon").'<a href="http://www.acurax.com/?utm_source=fsmi&utm_campaign=days" style="font-weight: normal; margin-left: 0px; color: rgb(68, 68, 68);" target="_blank">'. __("Acurax Technologies","floating-social-media-icon").'</a>'. __(" thank you for being with us, and we appreciate your feedback,reviews and support.","floating-social-media-icon").'<br><a href="https://wordpress.org/support/view/plugin-reviews/floating-social-media-icon?filter=5" target="_blank">'. __("Rate 5★'s on wordpress","floating-social-media-icon").'</a><a href="https://twitter.com/share?url=http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/&text='.$acx_tweet_text.' -" target="_blank">'. __("Tell Your Followers","floating-social-media-icon").'</a><a href="admin.php?page=Acurax-Social-Icons-Premium">'. __("Premium Version Benefits","floating-social-media-icon").'</a><a href="admin.php?page=Acurax-Social-Icons-Premium&td=hide">'. __("Hide for Now","floating-social-media-icon").'</a></div>';
 }
 $acx_si_installed_date = get_option('acx_si_installed_date');
 if ($acx_si_installed_date=="") { $acx_si_installed_date = time();}
 $acx_fsmi_d = 30;
-$acx_fsmi_d_n = 100;
 $acx_fsmi_prom = false;
 
 if(get_option('acx_si_td') == "")
@@ -1069,21 +1024,16 @@ if(get_option('acx_si_td') == "")
 	$acx_fsmi_next_date = $acx_si_installed_date+((60*60*24)*$acx_fsmi_d);
 	update_option('acx_fsmi_next_date', $acx_fsmi_next_date);
 	update_option('acx_si_td', "show");
-} else if(get_option('acx_si_td') == "hide")
-{
-	$acx_fsmi_next_date = time()+((60*60*24)*$acx_fsmi_d_n);
-	update_option('acx_fsmi_next_date', $acx_fsmi_next_date);
-	update_option('acx_si_td', "show");
 }
 $acx_fsmi_next_date = get_option('acx_fsmi_next_date');
 
 if(time() > $acx_fsmi_next_date)
 {
-$acx_fsmi_prom = true;
+	$acx_fsmi_prom = true;
 }
 if ($acx_fsmi_prom == true && get_option('acx_si_td') == "show")
 {
-add_action('admin_notices', 'acx_si_pluign_promotion',1);
+	add_action('admin_notices', 'acx_si_pluign_promotion',1);
 }
 
 // Starting Widget Code
@@ -1117,6 +1067,8 @@ class Acx_Social_Icons_Widget extends WP_Widget
 		{
             echo $before_title . $title . $after_title;
         }
+		
+		do_action('acx_fsmi_add_icon_customize_style',$instance,$this->get_field_id('widget'));
 		echo "<style>\n";
 		echo "." . $this->get_field_id('widget') . " img \n{\n";
 		echo "width:" . $icon_size . "px; \n } \n";
@@ -1125,7 +1077,8 @@ class Acx_Social_Icons_Widget extends WP_Widget
 		if($icon_align != "") { echo " style='text-align:" . $icon_align . ";'>"; } else { echo " style='text-align:center;'>"; }
 			 $acx_to_pass_array = array(
 		'theme' => $icon_theme,
-		'size'  => $icon_size
+		'size'  => $icon_size,
+		'align'  => $icon_align
 		);
 		echo acurax_si_simple($acx_to_pass_array);
 		echo "</div>";
@@ -1212,7 +1165,7 @@ $ad_1 = '
 					<h3>'. __("Compare and Decide","floating-social-media-icon").'</h3>
 				</div><!-- middle_h2_1 -->
 				
-<div id="ss_features_table"> 
+				<div id="ss_features_table"> 
 				
 					<div id="ss_table_header"> 
 						<div class="tb_h1"> <h3>'. __("Feature Group","floating-social-media-icon").'</h3> </div><!-- tb_h1 -->
@@ -1544,9 +1497,6 @@ $ad_1 = '
 						</div><!-- ss_y_n_holder -->						
 						
 					</div><!-- column_holder -->						
-					
-				
-					
 				</div><!-- ss_features_table -->		
 
 			<div id="ad_fsmi_2_button_order" style="float: left; width: 100%;">
@@ -1561,11 +1511,14 @@ add_action('acx_fsmi_comparison_premium','socialicons_comparison',1);
 function acx_fsmi_saveorder_callback()
 {
 	if(!isset($_POST['acx_fsmi_saveorder_es'])) die("<br><br>".__('Unknown Error Occurred, Try Again... ','floating-social-media-icon')."<a href=''>".__('Click Here','floating-social-media-icon')."</a>");
-	if(!wp_verify_nonce($_POST['acx_fsmi_saveorder_es'],'acx_fsmi_saveorder_es')) die("<br><br>".__('Sorry, You have no permission to do this action...','floating-social-media-icon')."</a>");
+	if(!wp_verify_nonce($_POST['acx_fsmi_saveorder_es'],'acx_fsmi_saveorder_es')) die("<br><br>".__('Sorry, You have no permission to do this action...','floating-social-media-icon')."<a href=''>".__('Click Here','floating-social-media-icon')."</a>");
 	global $wpdb;
-$social_icon_array_order = $_POST['recordsArray'];
-if (current_user_can('manage_options')) {
-	$social_icon_array_order = serialize($social_icon_array_order);
+	$social_icon_array_order = $_POST['recordsArray'];
+	if (current_user_can('manage_options')) {
+	if(!is_serialized($social_icon_array_order))
+	{
+		$social_icon_array_order = serialize($social_icon_array_order);
+	}
 	update_option('social_icon_array_order', $social_icon_array_order);
 	echo "<div id='acurax_notice' align='center' style='width: 420px; font-family: arial; font-weight: normal; font-size: 22px;'>";
 	_e("Social Media Icon's Order Saved","floating-social-media-icon");
@@ -1579,5 +1532,199 @@ if (current_user_can('manage_options')) {
 }
 	die(); // this is required to return a proper result
 } add_action('wp_ajax_acx_fsmi_saveorder', 'acx_fsmi_saveorder_callback');
+// refresh 
+function acx_fsmi_install_licence_refresh_callback()
+{
+	if (!isset($_POST['acx_fsmi_install_licence_refresh_w_c_n'])) die("<br><br>".__('Unknown Error Occurred, Try Again... ','floating-social-media-icon')."<a href=''>".__('Click Here','floating-social-media-icon')."</a>");
+	if (!wp_verify_nonce($_POST['acx_fsmi_install_licence_refresh_w_c_n'],'acx_fsmi_install_licence_refresh_w_c_n')) die("<br><br>".__('Unknown Error Occurred, Try Again... ','floating-social-media-icon')."<a href=''>".__('Click Here','floating-social-media-icon')."</a>");
+	
+	$key = $licence = $id = "";
+	$response_stat = "failed";
+	if(ISSET($_POST['key']))
+	{
+		$key = $_POST['key'];
+	}
+	if(ISSET($_POST['licence']))
+	{
+		$licence = $_POST['licence'];
+	}
+	if(function_exists('check_acx_pfsmi_license') && !function_exists('acx_check_fsmip_offline_license'))
+	{
+		$result = check_acx_pfsmi_license($licence,'',true,$id);
+	} else
+	{
+		$result = array();
+	}
+	if(ISSET($result["localkey"]))
+	{
+		$local_key = $result["localkey"];
+	}
+	else{
+		$local_key = "";
+	}
+	$acx_fsmip_licence_array = get_option('acx_fsmip_licence_array');
+	if(is_serialized($acx_fsmip_licence_array))
+	{
+		$acx_fsmip_licence_array = unserialize($acx_fsmip_licence_array);
+	}
+	if($acx_fsmip_licence_array == "" || !is_array($acx_fsmip_licence_array))
+	{
+		$acx_fsmip_licence_array = array();
+	}
+	$acx_fsmi_purchased_li_array = get_option('acx_fsmi_purchased_li_array');
+	if(is_serialized($acx_fsmi_purchased_li_array))
+	{
+		$acx_fsmi_purchased_li_array = unserialize($acx_fsmi_purchased_li_array);
+	}
+	if($acx_fsmi_purchased_li_array == "" || !is_array($acx_fsmi_purchased_li_array))
+	{
+		$acx_fsmi_purchased_li_array = array();
+	}
+	if(ISSET($result["status"]))
+	{
+		if($result["status"] == 'Active')
+		{
+			if(ISSET($acx_fsmip_licence_array[$key]))
+			{
+				if($local_key != "")
+				{
+					$acx_fsmip_licence_array[$key]['local_key'] = $local_key;
+					
+					if(!is_serialized($acx_fsmip_licence_array))
+					{
+						$acx_fsmip_licence_array = serialize($acx_fsmip_licence_array);
+					}
+					update_option('acx_fsmip_licence_array',$acx_fsmip_licence_array);
+					
+				}
+			}
+			
+		} 
+		$acx_fsmi_purchased_li_array[$licence]['status'] = $result['status'];
+		if(!is_serialized($acx_fsmi_purchased_li_array))
+		{
+			$acx_fsmi_purchased_li_array = serialize($acx_fsmi_purchased_li_array);
+		}
+		update_option('acx_fsmi_purchased_li_array',$acx_fsmi_purchased_li_array); 
+		$response_stat = "success";
+	}
+	echo $response_stat;
+	die();
+}
+add_action("wp_ajax_acx_fsmi_install_licence_refresh","acx_fsmi_install_licence_refresh_callback");
+function acx_fsmi_license_refresh_with_forcing($acx_license,$addon_key)
+{
+	$retry = true;
+	$acx_fsmi_ip =  isset($_SERVER['SERVER_ADDR']) ? $_SERVER['SERVER_ADDR'] : $_SERVER['LOCAL_ADDR'];
+	$acx_fsmi_domain = $_SERVER['SERVER_NAME'];
+	$acx_fsmi_directory = dirname(__FILE__);
+	$acx_fsmi_args = array(
+		'action' 	=> 'acx-li-check-latest-version',
+		'method'	=> 'addon_activation',
+		'directory' => $acx_fsmi_directory,
+		'unique_id' => $addon_key,
+		'domain' 	=> $acx_fsmi_domain,
+		'ip' 		=> $acx_fsmi_ip,
+		'licence' 	=> $acx_license
+	);
+	$acx_fsmi_unique_id = "";
+	$response_stat = "failed";
+	$acx_fsmip_licence_array = get_option('acx_fsmip_licence_array');
+	if(is_serialized($acx_fsmip_licence_array))
+	{
+		$acx_fsmip_licence_array = unserialize($acx_fsmip_licence_array);
+	}
+	if($acx_fsmip_licence_array == "" || !is_array($acx_fsmip_licence_array))
+	{
+		$acx_fsmip_licence_array = array();
+	}
+		$acx_fsmip_retry_array = get_option('acx_fsmip_retry_array');
+	if(is_serialized($acx_fsmip_retry_array))
+	{
+		$acx_fsmip_retry_array = unserialize($acx_fsmip_retry_array);
+	}
+	if($acx_fsmip_retry_array == "")
+	{
+		$acx_fsmip_retry_array = array();
+	}
+	if(!is_array($acx_fsmip_retry_array))
+	{
+		$acx_fsmip_retry_array = array();
+	}
+	if(ISSET($acx_fsmip_retry_array[$acx_license]['activation_licence_check']))
+	{
+		if($acx_fsmip_retry_array[$acx_license]['activation_licence_check'] >= 3)
+		{
+			$retry = false;	
+		}
+	}
+	if($retry == true)
+	{
+		$response = acx_fsmi_licence_activation_api_request( $acx_fsmi_args );
+		$response = json_decode($response, true);
+	}
+	
+	if(!ISSET($response['response_status']) && !ISSET($response['status']))
+	{
+		if(ISSET($acx_fsmip_retry_array[$acx_license]['activation_licence_check']))
+		{
+			$acx_fsmip_retry_array[$acx_license]['activation_licence_check'] = $acx_fsmip_retry_array[$acx_license]['activation_licence_check'] + 1;
+		}
+		else{
+			$acx_fsmip_retry_array[$acx_license]['activation_licence_check'] =  1;
+		}
+	}
+	else
+	{
+		if($response['response_status'] == "success" &&  $response['status'] == "Active")
+		{
+			$acx_fsmi_purchased_li_array = get_option('acx_fsmi_purchased_li_array');
+			if(is_serialized($acx_fsmi_purchased_li_array))
+			{
+				$acx_fsmi_purchased_li_array = unserialize($acx_fsmi_purchased_li_array);
+			}
+			if($acx_fsmi_purchased_li_array == "" || !is_array($acx_fsmi_purchased_li_array))
+			{
+				$acx_fsmi_purchased_li_array = array();
+			}
+			$acx_fsmi_unique_id = trim($response['unique_id']);
+			$acx_fsmi_purchased_li_array[$acx_license] = array(
+			'slug' => $response['slug'],
+			'status' => $response['status'],
+			'download_dynamic_url' => $response['download_dynamic_url']
+			); 
+			// update licence array
+			
+			$acx_fsmip_licence_array[$acx_fsmi_unique_id]['addon_name'] = $response['name'];
+			$acx_fsmip_licence_array[$acx_fsmi_unique_id]['licence_code'] = $acx_license;
+			if($response['localkey'] != "")
+			{
+				$acx_fsmip_licence_array[$acx_fsmi_unique_id]['local_key'] = $response['localkey'];
+			}
+			if(!is_serialized($acx_fsmip_licence_array))
+			{
+				$acx_fsmip_licence_array = serialize($acx_fsmip_licence_array);
+			}
+			update_option('acx_fsmip_licence_array',$acx_fsmip_licence_array); 
+			if(!is_serialized($acx_fsmi_purchased_li_array))
+			{
+				$acx_fsmi_purchased_li_array = serialize($acx_fsmi_purchased_li_array);
+			}
+			update_option('acx_fsmi_purchased_li_array',$acx_fsmi_purchased_li_array); 
+			$acx_fsmip_retry_array[$acx_license]['activation_licence_check'] =  0;
+			if(!is_serialized($acx_fsmip_retry_array))
+			{
+				$acx_fsmip_retry_array = serialize($acx_fsmip_retry_array);
+			}
+			update_option('acx_fsmip_retry_array',$acx_fsmip_retry_array);
+			$response_stat = $response['response_status'];
+		}
+	}
 
+	return $response_stat;
+}
+function acx_fsmi_load_plugin_textdomain() {
+    load_plugin_textdomain( 'floating-social-media-icon', FALSE, basename( dirname( __FILE__ ) ) . '/lang/' );
+}
+add_action( 'plugins_loaded', 'acx_fsmi_load_plugin_textdomain' );
 ?>

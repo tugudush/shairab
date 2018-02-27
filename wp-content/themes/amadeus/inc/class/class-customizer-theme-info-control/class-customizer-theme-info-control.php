@@ -108,6 +108,7 @@ if ( ! class_exists( 'Amadeus_Control_Upsell_Theme_Info' ) ) :
 									</ul>
 									<# } #>
 			</div>
-		<?php }
+		<?php
+		}
 	}
 endif;

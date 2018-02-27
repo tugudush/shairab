@@ -3,17 +3,16 @@ Contributors: SlideDeck
 Donate link: http://www.slidedeck.com/
 Tags: Slider, dynamic, responsive, image gallery, iPad, jquery, media, photo, pictures, plugin, posts, Search Engine Optimized, seo, skinnable, slide, slide show, slider, slideshow, theme, touch support, video, widget, Flickr, Instagram, 500px, RSS, Pinterest, Google+, YouTube, Vimeo, Dailymotion, Picasa, Dribbble, Facebook, NextGEN Gallery
 Requires at least: 3.3
-Tested up to: 4.2.2
+Tested up to: 4.5
 Stable tag: trunk
 License: GPLv3
 
-Create responsive content sliders on your WordPress blogging platform. Manage SlideDeck content and insert them into templates and posts.
 
 == Description ==
-
-= Deprecation Notice =
-**SlideDeck 2 Lite Responsive Content Slier is deprecated.** As of 10/05/2015 we will not longer be updating this plugin, but we suggest that you consider trying [SlideDeck 3 Lite](https://wordpress.org/plugins/slidedeck3/) for WordPress instead.
-[SlideDeck 3 Lite](https://wordpress.org/plugins/slidedeck3/) has replaced SlideDeck 2 and is now our primary SlideDeck focus.
+= We have launched a new and better version of SlideDeck Lite - SlideDeck | version 5 =
+The new version provides an improved plug-n-play architecture letting you build and customize image as well as video sliders. 
+Check out the feature reach SlideDeck version 5 out here
+[SlideDeck | Version 5](https://wordpress.org/plugins/slidedeck/)
 
 Thanks for your support! - The SlideDeck Team
 
@@ -82,6 +81,24 @@ Where to begin! The most important improvement is that SlideDeck 2 is designed t
 
 
 == Changelog ==
+= 2.3.20=
+* Fixed the security issues.
+
+= 2.3.19=
+* Fixed script vulnerability issues.
+
+= 2.3.18=
+* Fixed issue of banner image linking.
+
+= 2.3.17=
+* Fixed issue of Lenses image linking.
+
+= 2.3.16=
+* Fixed issue of Copy to Clipboard.
+
+= 2.3.15=
+* Added buttons to install and activate slidedeck3 lite.
+
 = 2.3.14=
 * Pinterest board issue fixed. Content now is retrieved as expected.
 

@@ -58,3 +58,4 @@
 [09-Jan-2017 21:29:58 America/Denver] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home1/bubospec/public_html/shairab/wp-includes/functions.php on line 8
 [09-Jan-2017 21:29:58 America/Denver] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/bubospec/public_html/shairab/wp-includes/functions.php on line 8
 [21-Mar-2017 13:19:51 America/Denver] PHP Fatal error:  Call to undefined function _deprecated_file() in /home1/bubospec/public_html/shairab/wp-includes/registration-functions.php on line 7
+[19-Jan-2018 14:15:28 America/Denver] PHP Fatal error:  Call to undefined function _deprecated_file() in /home1/bubospec/public_html/shairab/wp-includes/locale.php on line 10

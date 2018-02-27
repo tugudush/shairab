@@ -117,12 +117,14 @@ class Amadeus_Recent_Posts extends WP_Widget {
 		}
 		$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
 
-		$r = new WP_Query( array(
-			'posts_per_page'      => $number,
-			'no_found_rows'       => true,
-			'post_status'         => 'publish',
-			'ignore_sticky_posts' => true,
-		) );
+		$r = new WP_Query(
+			array(
+				'posts_per_page'      => $number,
+				'no_found_rows'       => true,
+				'post_status'         => 'publish',
+				'ignore_sticky_posts' => true,
+			)
+		);
 
 		if ( $r->have_posts() ) :
 			if ( ! empty( $args['before_widget'] ) ) {
@@ -142,7 +144,10 @@ class Amadeus_Recent_Posts extends WP_Widget {
 			}
 			?>
 			<ul class="list-group">
-				<?php while ( $r->have_posts() ) : $r->the_post(); ?>
+				<?php
+				while ( $r->have_posts() ) :
+					$r->the_post();
+?>
 					<li class="list-group-item">
 						<div class="recent-post clearfix">
 							<?php if ( has_post_thumbnail() ) : ?>

@@ -76,11 +76,15 @@ final class Amadeus_Customizer_Upsell {
 		$manager->register_section_type( 'Amadeus_Customizer_Theme_Info_Section' );
 
 		// Main Documentation Link In Customizer Root.
-		$manager->add_section( new Amadeus_Customizer_Theme_Info_Main( $manager, 'amadeus-theme-info', array(
-			'theme_info_title' => __( 'Amadeus', 'amadeus' ),
-			'label_url'    => esc_url( 'http://docs.themeisle.com/article/270-amadeus-documentation' ),
-			'label_text'   => __( 'Documentation', 'amadeus' ),
-		) ) );
+		$manager->add_section(
+			new Amadeus_Customizer_Theme_Info_Main(
+				$manager, 'amadeus-theme-info', array(
+					'theme_info_title' => __( 'Amadeus', 'amadeus' ),
+					'label_url'    => esc_url( 'http://docs.themeisle.com/article/270-amadeus-documentation' ),
+					'label_text'   => __( 'Documentation', 'amadeus' ),
+				)
+			)
+		);
 	}
 
 	/**

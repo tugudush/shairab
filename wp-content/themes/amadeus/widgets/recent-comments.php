@@ -65,11 +65,15 @@ class Amadeus_Recent_Comments extends WP_Widget {
 			$number = 5;
 		}
 
-		$comments = get_comments( apply_filters( 'widget_comments_args', array(
-			'number'      => $number,
-			'status'      => 'approve',
-			'post_status' => 'publish',
-		) ) );
+		$comments = get_comments(
+			apply_filters(
+				'widget_comments_args', array(
+					'number'      => $number,
+					'status'      => 'approve',
+					'post_status' => 'publish',
+				)
+			)
+		);
 
 		if ( ! empty( $args['before_widget'] ) ) {
 			$output .= $args['before_widget'];
@@ -94,7 +98,7 @@ class Amadeus_Recent_Comments extends WP_Widget {
 
 			foreach ( (array) $comments as $comment ) {
 				$output .= '<li class="list-group-item"><div class="recent-comment clearfix">' . get_avatar( $comment, 60 ) . '<div class="recent-comment-meta"><span>' . /* translators: comments widget: 1: comment author, 2: post link */
-				           sprintf( __( '%1$s on %2$s', 'amadeus' ), get_comment_author_link(), '</span><a class="post-title" href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a></div>' ) . '</div></li>';
+						   sprintf( __( '%1$s on %2$s', 'amadeus' ), get_comment_author_link(), '</span><a class="post-title" href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a></div>' ) . '</div></li>';
 			}
 		}
 		$output .= '</ul>';

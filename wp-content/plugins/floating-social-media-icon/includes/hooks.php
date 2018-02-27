@@ -136,4 +136,26 @@ function acx_fsmi_exprt_hook_option_form_head()
 {
 	do_action('acx_fsmi_exprt_hook_option_form_head');
 }
+/* Addon Page */
+
+function acx_fsmi_addon_hook_option_page_head()
+{
+	do_action('acx_fsmi_addon_hook_option_page_head');
+}
+function acx_fsmi_addon_hook_option_above_page_cvr()
+{
+	do_action('acx_fsmi_addon_hook_option_above_page_cvr');
+}
+function acx_fsmi_addon_hook_option_page()
+{
+	do_action('acx_fsmi_addon_hook_option_page');
+}
+function acx_fsmi_addon_hook_option_footer()
+{
+	do_action('acx_fsmi_addon_hook_option_footer');
+}
+function acx_fsmi_addon_hook_option_field_content()
+{
+	do_action('acx_fsmi_addon_hook_option_field_content');
+}
 ?>

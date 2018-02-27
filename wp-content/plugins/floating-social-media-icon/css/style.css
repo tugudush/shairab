@@ -2,7 +2,7 @@
 {
 position:absolute;
 z-index:10000;
-min-width: 142px;
+/* min-width: 142px; */
 }
 #divBottomRight img, #acurax_si_simple img, #short_code_si_icon img
 {

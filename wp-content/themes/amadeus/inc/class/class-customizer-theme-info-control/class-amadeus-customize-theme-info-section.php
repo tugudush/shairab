@@ -125,5 +125,6 @@ class Amadeus_Customizer_Theme_Info_Section extends WP_Customize_Section {
 				</ul>
 			<# } #>
 		</div>
-	<?php }
+	<?php
+	}
 }

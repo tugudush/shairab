@@ -8,12 +8,12 @@
  * Full Usage Documentation: http://www.slidedeck.com/usage-documentation 
  * 
  * @package SlideDeck
- * @subpackage SlideDeck 2 Pro for WordPress
- * @author dtelepathy
+ * @subpackage SlideDeck 3 Pro for WordPress
+ * @author SlideDeck
  */
 
 /*
-Copyright 2012 digital-telepathy  (email : support@digital-telepathy.com)
+Copyright 2012 HBWSL  (email : support@hbwsl.com)
 
 This file is part of SlideDeck.
 
@@ -63,8 +63,8 @@ along with SlideDeck.  If not, see <http://www.gnu.org/licenses/>.
             <p><?php _e( "Copy &amp; Paste this shortcode into your post" . ( current_user_can( 'edit_pages' ) ? " or page" : "" ), $namespace ); ?></p>
             
             <div class="action">
-                <input type="text" value="<?php echo slidedeck2_get_shortcode( $slidedeck_id ); ?>" readonly="readonly"<?php if( $iframe_by_default ) echo ' style="font-size:12px;"'; ?> />
-                <a href="#" class="slidedeck-copy-to-clipboard"><?php _e( "Copy Shortcode to Clipboard", $namespace ); ?> <img src="<?php echo SLIDEDECK2_URLPATH; ?>/images/icon-clipboard.png" alt=""></a>
+                <input type="text" class="slidedeck-copy-text" value="<?php echo slidedeck2_get_shortcode( $slidedeck_id ); ?>" readonly="readonly"<?php if( $iframe_by_default ) echo ' style="font-size:12px;"'; ?> />
+                <a href="#" class="slidedeck-copy-to-clipboard" onclick="sd_copytoclipboard();"><?php _e( "Copy Shortcode to Clipboard", $namespace ); ?> <img src="<?php echo SLIDEDECK2_URLPATH; ?>/images/icon-clipboard.png" alt=""></a>
                 <span class="complete-message" style="display:none;"><?php _e( "Copied Successfully!", $namespace ); ?></span>
             </div>
         </div>
@@ -74,3 +74,19 @@ along with SlideDeck.  If not, see <http://www.gnu.org/licenses/>.
         <a class="close" href="#close"><?php _e( "Close", $namespace ); ?></a>
     </div>
 </div>
+<script>
+    function sd_copytoclipboard() {
+        var sd_copybtn = document.querySelector('.slidedeck-copy-to-clipboard');
+        var sd_copytext = document.querySelector('.slidedeck-copy-text');
+        sd_copytext.select();
+        try {
+            var successful = document.execCommand('copy');
+            var success_span = document.querySelector('.complete-message');
+            success_span.style.display = "block";
+            // var msg = successful ? 'successful' : 'unsuccessful';
+            // console.log('Copying text command was ' + msg);
+        } catch (err) {
+            console.log('Oops, unable to copy');
+        }
+    }
+</script>

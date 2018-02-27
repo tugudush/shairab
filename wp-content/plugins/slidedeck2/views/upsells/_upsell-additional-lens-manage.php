@@ -1,19 +1,19 @@
 <?php
     $premium_lenses = array(
         'fashion' => array(
-            'thumbnail' => "https://s3.amazonaws.com/slidedeck-pro/upsell_assets/images/lenses/fashion/thumbnail-large.jpg",
+            'thumbnail' => "https://s3-us-west-2.amazonaws.com/slidedeck-pro/upsell_assets/images/lenses/fashion/thumbnail-large.jpg",
             'name' => "Fashion",
             'description' => "Ideal for sites with big bold images and a large number of slides.",
             'utm_content' => "SD2LENSFASHION"
         ),
         'classic' => array(
-            'thumbnail' => "https://s3.amazonaws.com/slidedeck-pro/upsell_assets/images/lenses/classic/thumbnail-large.jpg",
+            'thumbnail' => "https://s3-us-west-2.amazonaws.com/slidedeck-pro/upsell_assets/images/lenses/classic/thumbnail-large.jpg",
             'name' => "Classic",
             'description' => "The classic SlideDeck form-factor. Configurable vertical spines.",
             'utm_content' => "SD2LENSCLASSIC"
         ),
         'half-moon' => array(
-            'thumbnail' => "https://s3.amazonaws.com/slidedeck-pro/upsell_assets/images/lenses/half-moon/thumbnail-large.jpg",
+            'thumbnail' => "https://s3-us-west-2.amazonaws.com/slidedeck-pro/upsell_assets/images/lenses/half-moon/thumbnail-large.jpg",
             'name' => "Half Moon",
             'description' => "A great lens for showcasing your images and titles in a clean, blanaced, format.",
             'utm_content' => "SD2LENSHALFMOON"

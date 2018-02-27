@@ -1,0 +1,2 @@
+[09-Feb-2018 07:23:17 America/Denver] PHP Fatal error:  Call to undefined function get_template_directory() in /home1/bubospec/public_html/shairab/wp-content/themes/betheme/functions.php on line 11
+[09-Feb-2018 07:23:18 America/Denver] PHP Fatal error:  Call to undefined function get_template_directory() in /home1/bubospec/public_html/shairab/wp-content/themes/betheme/functions.php on line 11

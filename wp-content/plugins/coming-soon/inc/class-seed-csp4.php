@@ -27,6 +27,11 @@ class SEED_CSP4{
                     add_action( 'template_redirect', array(&$this,'render_comingsoon_page'));
                 }
                 add_action( 'admin_bar_menu',array( &$this, 'admin_bar_menu' ), 1000 );
+                // Disable the rest api in coming soon mode
+                $current_WP_version = get_bloginfo('version');
+                if ( version_compare( $current_WP_version, '4.7', '>=' ) ) {
+                    add_filter( 'rest_authentication_errors', array( &$this, 'only_allow_logged_in_rest_access') );
+                }
             }
 
             // Add this script globally so we can view the notification across the admin area
@@ -176,6 +181,7 @@ class SEED_CSP4{
         // Finally check if we should show the coming soon page.
         $this->comingsoon_rendered = true;
 
+
         // set headers
         if($status == '2'){
             header('HTTP/1.1 503 Service Temporarily Unavailable');
@@ -187,6 +193,29 @@ class SEED_CSP4{
                 exit();
             }
         }
+
+        // Prevetn Plugins from caching
+        // Disable caching plugins. This should take care of:
+        //   - W3 Total Cache
+        //   - WP Super Cache
+        //   - ZenCache (Previously QuickCache)
+        if(!defined('DONOTCACHEPAGE')) {
+          define('DONOTCACHEPAGE', true);
+        }
+        if(!defined('DONOTCDN')) {
+          define('DONOTCDN', true);
+        }
+        if(!defined('DONOTCACHEDB')) {
+          define('DONOTCACHEDB', true);
+        }
+        if(!defined('DONOTMINIFY')) {
+          define('DONOTMINIFY', true);
+        }
+        if(!defined('DONOTCACHEOBJECT')) {
+          define('DONOTCACHEOBJECT', true);
+        }
+        header('Cache-Control: max-age=0; private');
+
 
         // render template tags
         if(empty($html)){
@@ -212,6 +241,16 @@ class SEED_CSP4{
         }
         exit();
 
+    }
+
+    function only_allow_logged_in_rest_access( $access ) {
+
+        if( ! is_user_logged_in() ) {
+            return new WP_Error( 'rest_cannot_access', __( 'Only authenticated users can access the REST API.', 'coming-soon' ), array( 'status' => rest_authorization_required_code() ) );
+        }
+
+        return $access;
+        
     }
 
 }

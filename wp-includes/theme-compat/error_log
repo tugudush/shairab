@@ -1,0 +1,1 @@
+[11-Feb-2018 09:25:56 America/Denver] PHP Fatal error:  Call to undefined function post_class() in /home1/bubospec/public_html/shairab/wp-includes/theme-compat/embed-content.php on line 13

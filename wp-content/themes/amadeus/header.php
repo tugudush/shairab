@@ -26,13 +26,17 @@
 		<?php if ( has_nav_menu( 'social' ) ) : ?>
 		<nav class="social-navigation clearfix">
 			<div class="container">
-				<?php wp_nav_menu( array(
-					'theme_location' => 'social',
-					'link_before' => '<span class="screen-reader-text">',
-					'link_after' => '</span>',
-					'menu_class' => 'menu clearfix',
-					'fallback_cb' => false,
-				) ); ?>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'social',
+						'link_before' => '<span class="screen-reader-text">',
+						'link_after' => '</span>',
+						'menu_class' => 'menu clearfix',
+						'fallback_cb' => false,
+					)
+				);
+				?>
 			</div>
 		</nav>
 		<?php endif; ?>	
@@ -40,10 +44,14 @@
 		<?php if ( get_theme_mod( 'menu_position', 'below' ) == 'above' ) : ?>
 		<nav id="site-navigation" class="main-navigation menu-above" role="navigation">
 			<div class="container">
-			<?php wp_nav_menu( array(
-				'theme_location' => 'primary',
-				'menu_id' => 'primary-menu',
-			) ); ?>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'primary',
+					'menu_id' => 'primary-menu',
+				)
+			);
+			?>
 			</div>
 		</nav><!-- #site-navigation -->
 		<nav class="mobile-nav"></nav>
@@ -72,7 +80,8 @@
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 						<?php
-					} ?>
+					}
+					?>
 				</div><!-- .site-branding -->
 			</div>
 		</div>
@@ -80,10 +89,14 @@
 		<?php if ( get_theme_mod( 'menu_position', 'below' ) == 'below' ) : ?>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="container">
-			<?php wp_nav_menu( array(
-				'theme_location' => 'primary',
-				'menu_id' => 'primary-menu',
-			) ); ?>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'primary',
+					'menu_id' => 'primary-menu',
+				)
+			);
+			?>
 			</div>
 		</nav><!-- #site-navigation -->
 		<nav class="mobile-nav"></nav>

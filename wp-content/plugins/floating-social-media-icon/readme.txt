@@ -1,21 +1,22 @@
-﻿=== Floating Social Media Icon ===
-Contributors: Acurax 
+﻿=== Social Media Flying Icons | Floating Social Media Icon ===
+Contributors: Acurax, socialmediadesk
 Donate link: http://www.acurax.com/happy-clients.php
-
-Tags: floating social media, social network icon, social media widget, social media icon, socialmedia, social network widget, social floating icon, social profiles, floating social media button, social media button
-Requires at least: 2.8
-Tested up to: 4.4.2
+Tags: social media, floating social media, social network icon, social media widget, social media icon, socialmedia, social buttons, social floating icon, social icon style, floating social media button, social media button
+Requires at least: 3.0
+Requires PHP: 5.3
+Tested up to: 4.8.1
 Stable tag: trunk
+License: GPLv2 or later
 
-Top rated easy to use social media plugin with 20+ social media icon themes, supports icon animation,widgets,shortcode, drag and drop reorder, set icon size...
+Social Media Plugin with 30+ Social Media Icon Styles,Easy Configuration,Social Media Widget,Icon Animation,Drag Reorder,Highly Customizable
 
 == Description ==
 
-[This Plugin](http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/ "Floating Social Media Icon") Links Social Media Icons to Your Social Media Profiles Twitter,Facebook,Pinterest,Youtube,Rss Feed,Linkedin,google plus...
+[Floating Social Media Icon / Social Media Floating Icons](http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/ "Floating Social Media Icon / Social Media Floating Icons") Links Social Media Icons to Your Social Media Profiles Twitter,Facebook,Instagram,Pinterest,Youtube,Linkedin,google plus,Rss Feed...
 
-A Quicklook
+= SOCIAL MEDIA PLUGIN HIGHLIGHTS =
 
-	★ 20+ Icon Themes
+	★ 30 Icon Themes
 	
 	★ Set Icon Size & Order
 	
@@ -23,20 +24,20 @@ A Quicklook
 	
 	★ Multiple Widget & Shortcode Support
 	
-	★ Auto/Manual Integration
+	★ Flat Icons and Instagram support
 	
 	★ Enable/Disable Floating
 	
-	★ Most Downloaded Floating Social Network Plugin.
+	★ Most Downloaded Floating Social Media Plugin.
 	
-	★ Less Load - Essential Social Media Only
+	★ Less Load - Essential Social Media Icons Only
 	
 	★ Detailed Help Documentation
 	
-	★ Featured Plugin On Many Plugin Review Sites
+	★ Featured Plugin On Many Developer Portals
 
-You can make the social media icons to appear automatically or you can use social media widgets,
-short-code or PHP code to display the social media icons where ever you like to want.
+You can configure the social media icons to appear automatically or can use as social media widgets,
+display using short-code or PHP code where ever you wish.
 
 If you choose to show Social Media Icon automatically.
 The icons will fly from top left to bottom right and the social media icons will stay there
@@ -51,11 +52,11 @@ even if	user scrolls the page, thus it floats
 
 Multiple Social Media Widget Support
 
-	★ Each Social Media Widget Can Have Separate Icon Theme and Icon Size 
+	★ Each Social Media Widget Can Be Customized by Icon Size & Social Icon Style
  
 Shortcode Support
 	
-	★ Each Shortcode Support Separate social media Icon Theme and Icon Size (check faq)
+	★ Shortcode accept parameters to customize icon size & icon style (check faq)
 
 Icons in content
 
@@ -64,7 +65,7 @@ Icons in content
 
 Other Features
 
-	★ One and Only Plugin With 20+ Icon Designs with Pinterest Support
+	★ One and Only Plugin With 30 Icon Designs with Pinterest and Instagram Support
 	
 	★ Drag and Drop Reorder Icons
 	
@@ -80,7 +81,7 @@ Other Features
 
 In Short we can say, this is an ultimate social media icon widget that can be configured to float or not to float on your visitors screen.. check screenshots and video for a clear understanding.
 
-We Always Look Forward Your Comments and Suggestions for Future Updates. You can Submit Your Comments at our [Website](http://wordpress.acurax.com "Website Designing")
+We Always Look Forward Your Comments and Suggestions for Future Updates. You can Submit Your Comments at our [Website](http://www.acurax.com/webdesigning/ "Website Designing")
 
 [Click Here To See a Live Demo](http://www.acurax.com/products/floating-social-media-icon-plugin-wordpress/ "Floating Social Media Icon Demo")
 
@@ -88,9 +89,9 @@ We Always Look Forward Your Comments and Suggestions for Future Updates. You can
 
 **About**
 
-This Social Media Widget Wordpress Plugin With Floating Animation is developed and maintained by [Acurax International](http://wordpress.acurax.com "Website Designing"). For any support, you may contact us [here](http://www.acurax.com/contact.php "Web Consulting").
+This Social Media Widget Wordpress Plugin With Floating Animation is developed and maintained by [Acurax International](http://www.acurax.com/webdesigning/ "Website Designing"). For any support, you may contact us [here](http://www.acurax.com/contact.php "Web Consulting").
 
-[Acurax](http://wordpress.acurax.com "Acurax Web Design Development Service") Provide [Wordpress Theme Design](http://wordpress.acurax.com "Wordpress Theme Design Service") and [Development](http://wordpress.acurax.com "Wordpress Development") Services.
+[Acurax](http://www.acurax.com/webdevelopment/ "Acurax Web Design Development Service") Provide [Wordpress Theme Design](http://www.acurax.com/webdesigning/ "Wordpress Theme Design Service") and [Development](http://www.acurax.com "Wordpress Development") Services.
 
 **Plugin Video Tour**
 [youtube https://www.youtube.com/watch?v=UkeUYdjO_Z0]
@@ -211,7 +212,57 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 
 == Upgrade Notice ==
 
-= 4.0 =
+= Social Media Floating Icons - 4.2.6 =
+* Fix - Code Optimization.
+* Fix - Perfomance Improvements.
+
+= Social Media Floating Icons - 4.2.5 =
+* Fix - Bug on cannot redeclare.
+
+= Social Media Floating Icons - 4.2.4 =
+* Fix - Security Fixes
+
+= Social Media Floating Icons - 4.2.3 =
+* Fix - Bug Fixing
+
+= Social Media Floating Icons - 4.2.2 =
+* Fix - Perfomance Improvements
+* Fix - Optimized Loading Speed
+
+= Social Media Floating Icons - 4.2.1 =
+* Fix - Perfomance Improvements
+* Fix - Update Bug Fixes
+
+= Social Media Floating Icons - 4.2 =
+* Fix - Perfomance Improvements
+* Fix - Update Bug Fixes
+* New Feature - Easy Option to Install Addons
+
+= Social Media Floating Icons - 4.1.4 =
+* Fix - Perfomance Improvements
+
+= Social Media Floating Icons - 4.1.3 =
+* Fix - Perfomance Improvements
+* 6 New Icon Styles
+* Instagram Support Added
+* Code Improvements
+* Fixes for wordpress deprecated functions
+
+= Social Media Floating Icons - 4.1.2 =
+* Fix - Perfomance Improvements
+* Stable Release
+
+= Social Media Floating Icons - 4.1.1 =
+* Fix - Perfomance Improvements
+* Stable Release
+
+= Social Media Floating Icons - 4.1 =
+* New - Added Translation Support
+* Fix - Perfomance Improvements
+* New - Addon Support
+* Stable Release
+
+= Floating Social Media Icon - 4.0 =
 * Total Programming Logic Changes
 * Perfomance Improvements
 * Addon Support
@@ -219,7 +270,7 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Improved and Solid Structure
 * Stable Release
 
-= 3.0 =
+= Floating Social Media Icon - 3.0 =
 * Big Improvements on User Interface
 * Perfomance Improvements
 * Updated Twitter Icons
@@ -227,34 +278,34 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Icon Links No Follow Support
 * Stable Release
 
-= 2.3 =
+= Floating Social Media Icon - 2.3 =
 * Aug 25, 2015 | NOTE: Updating Plugin Will Not Change Your Settings/Configuration.. Update With Confidence :)
 * Code Optimization
 * Stable Release
 
-= 2.2 =
+= Floating Social Media Icon - 2.2 =
 * Aug 19, 2015 | NOTE: Updating Plugin Will Not Change Your Settings/Configuration.. Update With Confidence :)
 * Security Fix
 * Stable Release
 
-= 2.1 =
+= Floating Social Media Icon - 2.1 =
 * May 30, 2015 | NOTE: Updating Plugin Will Not Change Your Settings/Configuration.. Update With Confidence :)
 * Optimized Codes
 * Performance Improvements
 * Stable Release
 
-= 2.0 =
+= Floating Social Media Icon - 2.0 =
 * April 18, 2015 | NOTE: Updating Plugin Will Not Change Your Settings/Configuration.. Update With Confidence :)
 * Optimized Codes
 * Fixed Bugs With Facebook
 * Stable Release
 
-= 1.3.9 =
+= Floating Social Media Icon - 1.3.9 =
 * Feb 20, 2015 | NOTE: Updating Plugin Will Not Change Your Settings/Configuration.. Update With Confidence :)
 * Optimized Codes
 * Stable Release
 
-= 1.3.8 =
+= Floating Social Media Icon - 1.3.8 =
 * Dec 25, 2014 | NOTE: Updating Plugin Wwill Not Change Your Settings/Configuration.. Update With Confidence :)
 * UI Design Improvements
 * Improved Floating Icon Display Logic
@@ -265,17 +316,17 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Now you can align php/shortcode icons to left, right or centre
 * Stable Release
 
-= 1.3.7 =
+= Floating Social Media Icon - 1.3.7 =
 * Nov 02, 2014 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Minor Bug Fixes
 * Stable Release
 
-= 1.3.6 =
+= Floating Social Media Icon - 1.3.6 =
 * Sep 22, 2014 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Minor Bug Fixes
 * Stable Release
 
-= 1.3.5 =
+= Floating Social Media Icon - 1.3.5 =
 * June 04, 2014 | NOTE: Upgrading Will Not Make Any Changes to Settings/Configurations. Upgrade With Confidence :)
 * Added Option to Disable Floating Icons on Mobile Devices
 * Theme Warning Ignore Option
@@ -283,37 +334,37 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Improved User Interface
 * Stable Release
 
-= 1.3.4 =
+= Floating Social Media Icon - 1.3.4 =
 * March 07, 2014 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Added Theme Warning Ignore Option
 * Optimized Codes
 * Updated Option Description
 
-= 1.3.3 =
+= Floating Social Media Icon - 1.3.3 =
 * January 05, 2014 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Minor Bug Fixes
 * Optimized Codes
 * Spelling Corrections
 
-= 1.3.2 =
+= Floating Social Media Icon - 1.3.2 =
 * October 10, 2013 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Stable Release
 * Minor Bug Fixes
 * Optimized Codes
 
-= 1.3.1 =
+= Floating Social Media Icon - 1.3.1 =
 * August 28, 2013 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Stable Release
 * Security Improvements
 * Bug Fixes
 
-= 1.3 =
+= Floating Social Media Icon - 1.3 =
 * June 26, 2013 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Stable Release
 * Improved UI
 * Improved Programming Structure
 
-= 1.2 =
+= Floating Social Media Icon - 1.2 =
 * February 20, 2013 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Added Option to disable highlighting menu on admin area
 * Added Option to disable highlighting plugin on plugin list
@@ -322,7 +373,7 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Stable Release
 
 
-= 1.1.5 =
+= Floating Social Media Icon - 1.1.5 =
 * November 29, 2012 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Added Misc settings.
 * Now in Misc settings - You have option to fix icons displaying in vertical issue.
@@ -331,71 +382,121 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Added title tags to icon links.
 * Graphics Improvements
 
-= 1.1.4 =
+= Floating Social Media Icon - 1.1.4 =
 * July 14, 2012 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)..
 * Added Align Option In Widget Settings
 * Fixed Conflict With Other Plugins Settings Menu so Acx Social Icon Menu will not Disappear
 
-= 1.1.3 =
+= Floating Social Media Icon - 1.1.3 =
 * June 01, 2012 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)..
 * Optimized Images
 * Stable Release
 
-= 1.1.2 =
+= Floating Social Media Icon - 1.1.2 =
 * May 08, 2012 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)..
 * Added Rss Feed Support
 * Better Icon Quality
 
-= 1.1.1 =
+= Floating Social Media Icon - 1.1.1 =
 * April 20, 2012 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)..
 * Fixed Minor Styling Problem
 * Fixed Icon Size Problem on Manual Icon Display via Php
 
-= 1.1 =
+= Floating Social Media Icon - 1.1 =
 * April 06, 2012
 * Added Code Security
 * Now You can have as many widgets where you can define icon size and icon design for each widget.
 * Now You can have Shortcode customization where you can define icon size and icon design for each shortcodes (Check Faq for more info).
 
-= 1.0.9 =
+= Floating Social Media Icon - 1.0.9 =
 * March 21, 2012
 * Added Pinterest
 * Added drag and drop reorder option
 * AFTER UPDATE YOU NEED TO VISIT THE PLUGIN SETTINGS PAGE TO START SHOWING THE ICONS (Upgrade Will Not Alter Your Settings).
 
-= 1.0.8 =
+= Floating Social Media Icon - 1.0.8 =
 * March 14, 2012
 * Added More Icon Designs
 * Fixed Minor Layout Issues
 
-= 1.0.7 =
+= Floating Social Media Icon - 1.0.7 =
 * March 12, 2012
 * More Icon Theme/Style
 * Updated User Interface
 * Updated Faq
 * Added Google Plus Support
 
-= 1.0.6 =
+= Floating Social Media Icon - 1.0.6 =
 * March 11, 2012
 * Fixed Alignment Problem When Displaying All Icons With Bigger Size
 
-= 1.0.5 =
+= Floating Social Media Icon - 1.0.5 =
 * March 10, 2012
 * Major Fix For More Theme Compatibility
 
-= 1.0.4 =
+= Floating Social Media Icon - 1.0.4 =
 * March 09, 2012
 * Fixed Some Reported Bugs
 
-= 1.0.3 =
+= Floating Social Media Icon - 1.0.3 =
 * Major Fix to Support Older Versions of Wordpress
 
-= 1.0.2 =
+= Floating Social Media Icon - 1.0.2 =
 * Fixed Design Icon Clarity
 
 == Changelog ==
 
-= 4.0 =
+= Social Media Floating Icons - 4.2.6 =
+* Fix - Code Optimization.
+* Fix - Perfomance Improvements.
+
+= Social Media Floating Icons - 4.2.5 =
+* Fix - Bug on cannot redeclare.
+
+= Social Media Floating Icons - 4.2.4 =
+* Fix - Security Fixes
+
+= Social Media Floating Icons - 4.2.3 =
+* Fix - Bug Fixing
+
+= Social Media Floating Icons - 4.2.2 =
+* Fix - Perfomance Improvements
+* Fix - Optimized Loading Speed
+
+= Social Media Floating Icons - 4.2.1 =
+* Fix - Perfomance Improvements
+* Fix - Update Bug Fixes
+
+= Social Media Floating Icons - 4.2 =
+* Fix - Perfomance Improvements
+* Fix - Update Bug Fixes
+* New Feature - Easy Option to Install Addons
+
+= Social Media Floating Icons - 4.1.4 =
+* Fix - Perfomance Improvements
+
+= Social Media Floating Icons - 4.1.3 =
+* Fix - Perfomance Improvements
+* 6 New Icon Styles
+* Instagram Support Added
+* Code Improvements
+* Fixes for wordpress deprecated functions
+
+= Social Media Floating Icons - 4.1.2 =
+* Fix - Perfomance Improvements
+* Stable Release
+
+= Social Media Floating Icons - 4.1.1 =
+* Fix - Perfomance Improvements
+* Stable Release
+
+= Social Media Floating Icons - 4.1 =
+* New - Added Translation Support
+* Fix - Perfomance Improvements
+* New - Addon Support
+* Stable Release
+
+= Floating Social Media Icon - 4.0 =
 * Total Programming Logic Changes
 * Perfomance Improvements
 * Addon Support
@@ -403,7 +504,7 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Improved and Solid Structure
 * Stable Release
 
-= 3.0 =
+= Floating Social Media Icon - 3.0 =
 * Big Improvements on User Interface
 * Perfomance Improvements
 * Updated Twitter Icons
@@ -411,34 +512,34 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Icon Links No Follow Support
 * Stable Release
 
-= 2.3 =
+= Floating Social Media Icon - 2.3 =
 * Aug 25, 2015 | NOTE: Updating Plugin Will Not Change Your Settings/Configuration.. Update With Confidence :)
 * Code Optimization
 * Stable Release
 
-= 2.2 =
+= Floating Social Media Icon - 2.2 =
 * Aug 19, 2015 | NOTE: Updating Plugin Will Not Change Your Settings/Configuration.. Update With Confidence :)
 * Security Fix
 * Stable Release
 
-= 2.1 =
+= Floating Social Media Icon - 2.1 =
 * May 30, 2015 | NOTE: Updating Plugin Will Not Change Your Settings/Configuration.. Update With Confidence :)
 * Optimized Codes
 * Performance Improvements
 * Stable Release
 
-= 2.0 =
+= Floating Social Media Icon - 2.0 =
 * April 18, 2015 | NOTE: Updating Plugin Will Not Change Your Settings/Configuration.. Update With Confidence :)
 * Optimized Codes
 * Fixed Bugs With Facebook
 * Stable Release
 
-= 1.3.9 =
+= Floating Social Media Icon - 1.3.9 =
 * Feb 20, 2015 | NOTE: Updating Plugin Will Not Change Your Settings/Configuration.. Update With Confidence :)
 * Optimized Codes
 * Stable Release
 
-= 1.3.8 =
+= Floating Social Media Icon - 1.3.8 =
 * Dec 08, 2014 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * UI Design Improvements
 * Improved Floating Icon Display Logic
@@ -449,17 +550,17 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Now you can align php/shortcode icons to left, right or centre
 * Stable Release
 
-= 1.3.7 =
+= Floating Social Media Icon - 1.3.7 =
 * Nov 02, 2014 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Minor Bug Fixes
 * Stable Release
 
-= 1.3.6 =
+= Floating Social Media Icon - 1.3.6 =
 * Sep 22, 2014 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Minor Bug Fixes
 * Stable Release
 
-= 1.3.5 =
+= Floating Social Media Icon - 1.3.5 =
 * June 04, 2014 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Added Option to Disable Floating on Mobile Devices
 * Theme Warning Ignore Option
@@ -467,37 +568,37 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Improved User Interface
 * Stable Release
 
-= 1.3.4 =
+= Floating Social Media Icon - 1.3.4 =
 * March 07, 2014 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Added Theme Warning Ignore Option
 * Optimized Codes
 * Updated Option Description
 
-= 1.3.3 =
+= Floating Social Media Icon - 1.3.3 =
 * January 05, 2014 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Minor Bug Fixes
 * Optimized Codes
 * Spelling Corrections
 
-= 1.3.2 =
+= Floating Social Media Icon - 1.3.2 =
 * October 10, 2013 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Stable Release
 * Minor Bug Fixes
 * Optimized Codes
 
-= 1.3.1 =
+= Floating Social Media Icon - 1.3.1 =
 * August 28, 2013 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Stable Release
 * Security Improvements
 * Bug Fixes
 
-= 1.3 =
+= Floating Social Media Icon - 1.3 =
 * June 26, 2013 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Stable Release
 * Improved UI
 * Improved Programming Structure
 
-= 1.2 =
+= Floating Social Media Icon - 1.2 =
 * February 20, 2013 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Added Option to disable highlighting menu on admin area
 * Added Option to disable highlighting plugin on plugin list
@@ -505,7 +606,7 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Improved Programming Structure
 * Stable Release
 
-= 1.1.5 =
+= Floating Social Media Icon - 1.1.5 =
 * November 29, 2012 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)
 * Added Misc settings.
 * Now in Misc settings - You have option to fix icons displaying in vertical issue.
@@ -514,64 +615,73 @@ Have more questions ? [Drop a mail](http://www.acurax.com/contact.php/ "Drop an 
 * Added title tags to icon links.
 * Graphics Improvements.
 
-= 1.1.4 =
+= Floating Social Media Icon - 1.1.4 =
 * July 14, 2012 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)..
 * Added Align Option In Widget Settings
 * Fixed Conflict With Other Plugins Settings Menu so Acx Social Icon Menu will not Disappear
 
-= 1.1.3 =
+= Floating Social Media Icon - 1.1.3 =
 * June 01, 2012 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)..
 * Optimized Images
 * Stable Release
 
-= 1.1.2 =
+= Floating Social Media Icon - 1.1.2 =
 * May 08, 2012 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)..
 * Added Rss Feed Support
 * Better Icon Quality
 
-= 1.1.1 =
+= Floating Social Media Icon - 1.1.1 =
 * April 20, 2012 | NOTE: UPGRADING PLUGIN WILL NOT CHANGE YOUR SETTINGS/CONFIGURATION.. UPGRADE WITH CONFIDENCE :)..
 * Fixed Minor Styling Problem
 * Fixed Icon Size Problem on Manual Icon Display via Php
 
-= 1.1 =
+= Floating Social Media Icon - 1.1 =
 * April 06, 2012
 * Added Code Security
 * Now You can have as many widgets where you can define icon size and icon design for each widget.
 * Now You can have Shortcode customization where you can define icon size and icon design for each shortcodes (Check Faq for more info).
 
-= 1.0.9 =
+= Floating Social Media Icon - 1.0.9 =
 * March 21, 2012
 * Added Pinterest
 * Added drag and drop reorder option
 * AFTER UPDATE YOU NEED TO VISIT THE PLUGIN SETTINGS PAGE TO START SHOWING THE ICONS (Upgrade Will Not Alter Your Settings).
 
-= 1.0.8 =
+= Floating Social Media Icon - 1.0.8 =
 * March 14, 2012
 * Added More Icon Designs
 * Fixed Minor Layout Issues
 
-= 1.0.7 =
+= Floating Social Media Icon - 1.0.7 =
 * March 12, 2012
 * More Icon Theme/Style
 * Updated User Interface
 * Updated Faq
 * Added Google Plus Support
 
-= 1.0.6 =
+= Floating Social Media Icon - 1.0.6 =
 * March 11, 2012
 * Fixed Alignment Problem When Displaying All Icons With Bigger Size
 
-= 1.0.5 =
+= Floating Social Media Icon - 1.0.5 =
 * March 10, 2012
 * Major Fix For More Theme Compatibility
 
-= 1.0.4 =
+= Floating Social Media Icon - 1.0.4 =
 * March 09, 2012
 * Fixed Some Reported Bugs
 
-= 1.0.3 =
+= Floating Social Media Icon - 1.0.3 =
 * Major Fix to Support Older Versions of Wordpress
 
-= 1.0.2 =
+= Floating Social Media Icon - 1.0.2 =
 * Fixed Design Icon Clarity
+
+= Requirements =
+
+    WordPress 3.0+
+    PHP 5+ 
+
+= Feedback =
+
+We would like to receive your feedback and suggestions about Social Media Floating Icons. You may submit them at our [website](http://www.acurax.com/contact.php "Acurax Website").

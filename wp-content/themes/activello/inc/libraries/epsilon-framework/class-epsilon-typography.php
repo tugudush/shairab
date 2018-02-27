@@ -42,7 +42,7 @@ class Epsilon_Typography {
 	 *
 	 * @var null
 	 */
-	protected $handler = NULL;
+	protected $handler = null;
 
 	/**
 	 * Epsilon_Typography constructor.
@@ -56,7 +56,7 @@ class Epsilon_Typography {
 	 * During construct, $this->options is being populated with the options
 	 * defined as typography. After this, the inline scripts are enqueued.
 	 */
-	public function __construct( $args = array(), $handler = NULL ) {
+	public function __construct( $args = array(), $handler = null ) {
 		$this->handler = $handler;
 		$this->options = $this->get_option( $args );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
@@ -66,20 +66,20 @@ class Epsilon_Typography {
 		 */
 		add_action( 'wp_ajax_epsilon_generate_typography_css', array(
 			$this,
-			'epsilon_generate_typography_css'
+			'epsilon_generate_typography_css',
 		) );
 		add_action( 'wp_ajax_nopriv_epsilon_generate_typography_css', array(
 			$this,
-			'epsilon_generate_typography_css'
+			'epsilon_generate_typography_css',
 		) );
 
 		add_action( 'wp_ajax_epsilon_retrieve_font_weights', array(
 			$this,
-			'epsilon_retrieve_font_weights'
+			'epsilon_retrieve_font_weights',
 		) );
 		add_action( 'wp_ajax_nopriv_epsilon_retrieve_font_weights', array(
 			$this,
-			'epsilon_retrieve_font_weights'
+			'epsilon_retrieve_font_weights',
 		) );
 	}
 
@@ -94,7 +94,7 @@ class Epsilon_Typography {
 		if ( ! empty( $args ) ) {
 			foreach ( $args as $option ) {
 				$typo = get_theme_mod( $option, '' );
-				if ( $typo === '' ) {
+				if ( '' === $typo ) {
 					continue;
 				}
 
@@ -119,7 +119,7 @@ class Epsilon_Typography {
 	 *
 	 * @return Epsilon_Typography
 	 */
-	public static function get_instance( $args = NULL, $handler = NULL ) {
+	public static function get_instance( $args = null, $handler = null ) {
 		static $inst;
 
 		if ( ! $inst ) {
@@ -137,14 +137,14 @@ class Epsilon_Typography {
 	 * @access public
 	 * @return array|mixed|object
 	 */
-	public function google_fonts( $font = NULL ) {
+	public function google_fonts( $font = null ) {
 		global $wp_filesystem;
 		if ( empty( $wp_filesystem ) ) {
 			require_once( ABSPATH . '/wp-admin/includes/file.php' );
 			WP_Filesystem();
 		}
 
-		$path   = get_template_directory() . '/inc/libraries/epsilon-framework/assets/data/gfonts.json';
+		$path   = dirname( __FILE__ ) . '/assets/data/gfonts.json';
 		$gfonts = $wp_filesystem->get_contents( $path );
 		$gfonts = json_decode( $gfonts );
 
@@ -167,7 +167,7 @@ class Epsilon_Typography {
 			$args = $args['font-family'];
 		}
 
-		$defaults = array( 'Select font', 'Theme default', 'default_font', 'Lato' );
+		$defaults = array( 'Select font', 'Theme default', 'default_font' );
 		if ( in_array( $args, $defaults ) ) {
 			return false;
 		}
@@ -191,20 +191,39 @@ class Epsilon_Typography {
 	public function generate_css( $options ) {
 		$css      = '';
 		$defaults = array( 'Select font', 'Theme default', 'initial', 'default_font' );
+		$css      .= $options['selectors'] . '{' . "\n";
 
-		$css .= $options['selectors'] . '{' . "\n";
 		foreach ( $options['json'] as $property => $value ) {
 			$extra = '';
 
-			if ( in_array( $value, $defaults ) ) {
+			if ( in_array( $value, $defaults ) || empty( $value ) ) {
 				continue;
 			}
 
-			if ( $property === 'font-size' || $property === 'line-height' ) {
+			if ( 'font-size' === $property || 'line-height' === $property || 'letter-spacing' === $property ) {
 				$extra = 'px';
 			}
 
-			$css .= $property . ':' . $value . $extra . ';' . "\n";
+			switch ( $property ) {
+				case 'font-size':
+				case 'line-height':
+				case 'letter-spacing':
+					$css .= $property . ':' . $value . $extra . ';' . "\n";
+					break;
+				case 'font-weight':
+					if ( 'on' === $value ) {
+						$css .= $property . ': bold;' . "\n";
+					}
+					break;
+				case 'font-style':
+					if ( 'on' === $value ) {
+						$css .= $property . ': italic;' . "\n";
+					}
+					break;
+				default :
+					$css .= $property . ':' . $value . ';' . "\n";
+					break;
+			}
 		}
 		$css .= '}' . "\n";
 
@@ -222,10 +241,10 @@ class Epsilon_Typography {
 			$css .= $this->generate_css( $v );
 		}
 
-		if ( $css !== '' ) {
+		if ( '' !== $css ) {
 			$this->font_imports = array_unique( $this->font_imports );
 			foreach ( $this->font_imports as $font ) {
-				if ( $font !== NULL ) {
+				if ( null !== $font ) {
 					$fonts .= '@import url("https://fonts.googleapis.com/css?family=' . $font . '");' . "\n";
 				}
 			}
@@ -242,7 +261,7 @@ class Epsilon_Typography {
 	public function epsilon_generate_typography_css() {
 		$args = array(
 			'selectors',
-			'json'
+			'json',
 		);
 
 		/**
@@ -260,33 +279,6 @@ class Epsilon_Typography {
 		 * Echo the css inline sheet
 		 */
 		echo $typography->generate_css( $args );
-		wp_die();
-	}
-
-	public function epsilon_retrieve_font_weights() {
-		if ( empty( $_POST ) || empty( $_POST['args'] ) || $_POST['action'] !== 'epsilon_retrieve_font_weights' ) {
-			wp_die();
-		}
-
-		global $wp_filesystem;
-		if ( empty( $wp_filesystem ) ) {
-			require_once( ABSPATH . '/wp-admin/includes/file.php' );
-			WP_Filesystem();
-		}
-
-		$path   = get_template_directory() . '/inc/libraries/epsilon-framework/assets/data/gfonts.json';
-		$gfonts = $wp_filesystem->get_contents( $path );
-		$gfonts = json_decode( $gfonts );
-		$return = array();
-
-		$family   = $gfonts->{$_POST['args']};
-		$return[] = array( 'text' => esc_html__( 'Theme default', 'epsilon-framework' ), 'value' => 'initial' );
-
-		foreach ( $family->variants as $weight ) {
-			$return[] = array( 'text' => $weight, 'value' => $weight );
-		}
-
-		echo json_encode( $return );
 		wp_die();
 	}
 }

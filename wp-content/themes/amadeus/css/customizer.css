@@ -17,10 +17,6 @@
 	content: "\f10c";
 }
 
-#accordion-section-amadeus_general h3:before {
-	content: "\f013";
-}
-
 #accordion-panel-amadeus_header_panel h3:before {
 	content: "\f108";
 }

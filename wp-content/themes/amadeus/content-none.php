@@ -16,9 +16,12 @@
 	<div class="page-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php
+			<p>
+			<?php
 				/* translators: Add new post link */
-				printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'amadeus' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+				printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'amadeus' ), esc_url( admin_url( 'post-new.php' ) ) );
+				?>
+				</p>
 
 		<?php elseif ( is_search() ) : ?>
 

@@ -52,11 +52,11 @@ along with SlideDeck.  If not, see <http://www.gnu.org/licenses/>.
                echo $create_custom_slidedeck_block_html;
             ?>
         </div>
-        
+        <!--
         <div style="height: 152px;">
             <iframe height="152px" frameborder="0" scrolling="no" width="980px" allowtransparency="true" src="http://www.slidedeck.com/lite-signup-in-app/"></iframe>
         </div>
-
+        -->
         <div id="slidedeck-table">
             <?php if( !empty( $slidedecks ) ): ?>
                 <form action="<?php echo admin_url( 'admin-ajax.php' ); ?>" id="slidedeck-table-sort">
@@ -83,9 +83,9 @@ along with SlideDeck.  If not, see <http://www.gnu.org/licenses/>.
                         <?php if( !SlideDeckLitePlugin::get_partner_data() ){ ?>
                        <!-- <div id="manage-iab" class="iab">
                          <iframe height="100%" frameborder="0" scrolling="no" width="100%" allowtransparency="true" src="<?php echo $sidebar_ad_url; ?>"></iframe>
-                        </div>-->
+                        </div>
 			<div id="manage-pro-img"><a target="_blank" href="http://www.slidedeck.com/pricing"><img src="https://s3.amazonaws.com/wpeka-slidedeck-pro/slidedeck-tips-and-tricks.png" border="0"/></a></div><br/>
-			
+			-->
                         <?php } ?>
                         
                         <?php do_action( "{$namespace}_manage_sidebar_bottom" ); ?>

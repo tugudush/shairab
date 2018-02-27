@@ -29,20 +29,26 @@
 
 		<div class="entry-content">
 			<?php if ( (get_theme_mod( 'full_content' ) == 1) ) : ?>
-				<?php the_content( sprintf(
-					/* translators: Title of the post */
-					__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'amadeus' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				) ); ?>
+				<?php
+				the_content(
+					sprintf(
+						/* translators: Title of the post */
+						 __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'amadeus' ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					)
+				);
+				?>
 			<?php else : ?>
 				<?php the_excerpt(); ?>
 			<?php endif; ?>
 
 			<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'amadeus' ),
-					'after'  => '</div>',
-				) );
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . __( 'Pages:', 'amadeus' ),
+						'after'  => '</div>',
+					)
+				);
 			?>
 		</div><!-- .entry-content -->
 	</div>

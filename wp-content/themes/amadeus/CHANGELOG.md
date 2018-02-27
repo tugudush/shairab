@@ -1,4 +1,9 @@
 
+### 2.0.6 - 07/08/2017
+**Changes:** 
+- Fixed Grunt errors
+- Removed unused favicon control
+
 ### 2.0.5 - 11/04/2017
 **Changes:** 
 - Update tgm library

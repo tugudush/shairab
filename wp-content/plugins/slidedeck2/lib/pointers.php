@@ -86,7 +86,19 @@ class SlideDeckPointers {
                 'align' => "left"
             )
         );
+        $content = '<h3 class="' . $this->namespace . '">' . esc_js( __( "Subscribe & Win", $this->namespace ) ) . '</h3>';
+        $content.= '<div class="more-info">';
+        $content.= '<strong style="font-size:20px;text-align:center;">' . esc_js( __( "FREE DEVELOPER LICENSE", $this->namespace ) ) . '</strong><br />';
         
+        $content.= '<p>' . esc_js( __( "Subscribe for the SlideDeck newsletter - in addition to bringing you the latest WordPress news & useful web design tips,", $this->namespace ) );
+        $content.= '<strong>' . esc_js( __( " each month we give away a SlideDeck 3 Developer license (worth USD$97) to one of our lucky subscribers for free! ", $this->namespace ) ) . '</strong></p><br />';
+        
+        // $content.= '<div class="wrapper"><span class="the-offer no-margin">25% Off<span>&nbsp;</span></span><span class="the-offer">7 Days<span>&nbsp;</span></span></div>';
+        $content.= '<em>' . esc_js( __( "We promise we’ll never sell your info to anyone.", $this->namespace ) ) . '</em>';
+        $content.= '<a href="http://eepurl.com/cBey2v" target="_blank" class="button slidedeck-noisy-button"><span>Subscribe</span></a>';
+        
+        $content.= '</div>';
+        /*
         $content = '<h3 class="' . $this->namespace . '">' . esc_js( __( "7 days, 25% discount on SlideDeck 2", $this->namespace ) ) . '</h3>';
         $content.= '<div class="more-info">';
         $content.= '<strong>' . esc_js( __( "Welcome, thanks for choosing SlideDeck Lite!", $this->namespace ) ) . '</strong>';
@@ -95,7 +107,7 @@ class SlideDeckPointers {
         $content.= '<div class="wrapper"><span class="the-offer no-margin">25% Off<span>&nbsp;</span></span><span class="the-offer">7 Days<span>&nbsp;</span></span></div>';
         $content.= '<a href="' . $SlideDeckPlugin->action( '/upgrades' ) . '" class="button slidedeck-noisy-button"><span>Learn More</span></a>';
         $content.= '</div>';
-        
+        */
         
         $this->create( "installation-discount", '#discount-upgrade-notice', $content, $install_args );
     }

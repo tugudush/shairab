@@ -89,11 +89,13 @@ class Amadeus_About extends WP_Widget {
 	 * @param array $instance The widget options.
 	 */
 	public function form( $instance ) {
-		$instance  = wp_parse_args( (array) $instance, array(
-			'title' => '',
-			'text' => '',
-			'image_url' => '',
-		) );
+		$instance  = wp_parse_args(
+			(array) $instance, array(
+				'title' => '',
+				'text' => '',
+				'image_url' => '',
+			)
+		);
 		$title     = strip_tags( $instance['title'] );
 		$text      = esc_textarea( $instance['text'] );
 		$image_url = esc_url( $instance['image_url'] );

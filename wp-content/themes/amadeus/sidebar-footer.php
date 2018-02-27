@@ -13,13 +13,17 @@
 			<div class="sidebar-column col-md-4 col-sm-4">
 				<?php dynamic_sidebar( 'sidebar-4' ); ?>
 			</div>
-		<?php }
-if ( is_active_sidebar( 'sidebar-5' ) ) { ?>
+		<?php
+}
+if ( is_active_sidebar( 'sidebar-5' ) ) {
+?>
 			<div class="sidebar-column col-md-4 col-sm-4">
 				<?php dynamic_sidebar( 'sidebar-5' ); ?>
 			</div>
-		<?php }
-if ( is_active_sidebar( 'sidebar-6' ) ) { ?>
+		<?php
+}
+if ( is_active_sidebar( 'sidebar-6' ) ) {
+?>
 			<div class="sidebar-column col-md-4 col-sm-4">
 				<?php dynamic_sidebar( 'sidebar-6' ); ?>
 			</div>

@@ -13,13 +13,13 @@
  Plugin Name: SlideDeck 2 Lite
  Plugin URI: http://www.slidedeck.com/wordpress
  Description: Create SlideDecks on your WordPress blogging platform and insert them into templates and posts. Get started creating SlideDecks from the new SlideDeck menu in the left hand navigation.
-Version: 2.3.13
- Author: digital-telepathy
- Author URI: http://www.dtelepathy.com
+Version: 2.3.20
+ Author: SlideDeck
+ Author URI: https://www.slidedeck.com
  License: GPL3
  */
 /*
- Copyright 2012 digital-telepathy  (email : support@digital-telepathy.com)
+ Copyright 2012 SlideDeck  (email : support@slidedeck.com)
 
  This file is part of SlideDeck.
 
@@ -49,7 +49,7 @@ class SlideDeckLitePlugin {
         'ecf3509'
     );
     
-    static $version = '2.3.14';
+    static $version = '2.3.20';
     static $license = 'LITE';
 
     // Generally, we are not installing addons. If we are, this gets set to true.
@@ -186,6 +186,7 @@ class SlideDeckLitePlugin {
     function __construct( ) {
 	define('SLIDEDECK2_URL',plugin_dir_url(__FILE__ ));
     	define('SLIDEDECK2_PATH',plugin_dir_path(__FILE__ ));
+        
         SlideDeckLitePlugin::load_constants();
         
         $this->friendly_name = SlideDeckLitePlugin::$st_friendly_name;
@@ -695,7 +696,9 @@ class SlideDeckLitePlugin {
         add_action( "wp_ajax_{$this->namespace}_anonymous_stats_optin", array( &$this, 'ajax_anonymous_stats_optin' ) );
         
         add_action( "wp_ajax_{$this->namespace}_dt_labs_update_modal", array( &$this, 'ajax_dt_labs_update_modal' ) );
-
+        
+        add_action( "wp_ajax_{$this->namespace}_install_plugin_install", array( &$this, 'ajax_install_slidedeck3' ) );
+        add_action( "wp_ajax_{$this->namespace}_install_plugin_activate", array( &$this, 'ajax_install_slidedeck3' ) );
         // Append necessary lens and initialization script commands to the bottom
         // of the DOM for proper loading
         add_action( 'wp_print_footer_scripts', array( &$this, 'print_footer_scripts' ) );
@@ -1010,7 +1013,92 @@ class SlideDeckLitePlugin {
             add_action( "load-{$this->menu['options']}", array( &$this, "load_admin_page" ) );
         }
     }
+    
 
+    
+    
+    function ajax_install_slidedeck3( $action ) {
+        $action = isset( $_GET['action'] ) ? $_GET['action'] : $action;
+		switch ( $action ) {
+
+			
+
+			case 'slidedeck_install_plugin_install':
+                         
+                                $error = 0;                  
+				check_ajax_referer( 'slidedeck_install_plugin_slidedeck3');
+                                if (!file_exists(ABSPATH.'wp-content/plugins/slidedeck3/slidedeck2-lite.php')) {
+				if ( ! current_user_can( 'install_plugins' ) || ! current_user_can( 'activate_plugins' ) )
+					die( __( 'ERROR: You lack permissions to install and/or activate plugins.', $this->namespace ) );
+
+				include_once ( ABSPATH . 'wp-admin/includes/plugin-install.php' );
+
+				$api = plugins_api( 'plugin_information', array( 'slug' => 'slidedeck3', 'fields' => array( 'sections' => false ) ) );
+                                
+				if ( is_wp_error( $api ) )
+                                    die( sprintf( __( 'ERROR: Error fetching plugin information: %s', $this->namespace ), $api->get_error_message() ) );
+                                
+                                
+                                include_once(SLIDEDECK2_PATH.'classes/class-empty-upgrader-skin.php');
+                               // $upgrader = new Plugin_Upgrader( new Plugin_Installer_Skin( compact('title', 'url', 'nonce', 'plugin', 'api') ) );
+				
+                               $upgrader = new Plugin_Upgrader( new Automattic_Developer_Empty_Upgrader_Skin( array(
+					'nonce'  => 'install-plugin_slidedeck3',
+					'plugin' => 'slidedeck3',
+					'api'    => $api,
+				) ) );
+                                 
+                                
+                                $install_result = $upgrader->install( $api->download_link );
+				if ( ! $install_result || is_wp_error( $install_result ) ) {
+                                        $error = 1;
+					// $install_result can be false if the file system isn't writeable.
+					$error_message = __( 'Please ensure the file system is writeable', $this->namespace);
+
+					if ( is_wp_error( $install_result ) )
+						$error_message = $install_result->get_error_message();
+                                        
+					( sprintf( __( 'ERROR: Failed to install plugin: %s', $this->namespace ), $error_message ) );
+				}
+                               
+                                }
+                                
+                               
+                                wp_redirect('admin.php?page=slidedeck2-lite.php&error="'.$error.'"');
+				
+                             
+
+			case 'slidedeck_install_plugin_activate':
+                                
+				
+				check_ajax_referer( 'slidedeck_activate_plugin_slidedeck3' );
+                               $error = 4;
+                                if ( ! current_user_can( 'activate_plugins' ) ) {
+                                    $error = 3;
+                                    ( __( 'ERROR: You lack permissions to activate plugins.', $this->namespace ) );
+                                } else {
+                                    $deactivate_result = deactivate_plugins(plugin_basename( __FILE__ ));    
+                                    $activate_result = activate_plugin( plugin_basename( __FILE__ ) );
+                                    
+                                    if ( is_wp_error( $activate_result ) ) {
+                                        $error = 2;
+                                        ( sprintf( __( 'ERROR: Failed to activate plugin: %s', $this->namespace ), $activate_result->get_error_message() ) );
+                                        $activate_result = activate_plugin( ABSPATH.'wp-content/plugins/slidedeck2/slidedeck2-lite.php' );
+                                    }
+                                }
+					
+                                					
+                                wp_redirect('admin.php?page=slidedeck2-lite.php&error="'.$error.'"');
+                                
+                                
+                                 
+		}
+
+		// Unknown action
+		//die( '-1' );
+    }
+    
+    
     /**
      * AJAX response to adding a source to a SlideDeck
      * 
@@ -1701,9 +1789,9 @@ class SlideDeckLitePlugin {
 
         $slidedeck_id = intval( $_POST['slidedeck'] );
 
-        if( in_array( $_POST['background'], array_keys( $this->stage_backgrounds ) ) ) {
-            update_post_meta( $slidedeck_id, "{$this->namespace}_stage_background", $_POST['background'] );
-            update_user_meta( $current_user->ID, "{$this->namespace}_default_stage_background", $_POST['background'] );
+        if( in_array( slidedeck2_sanitize($_POST['background']), array_keys( $this->stage_backgrounds ) ) ) {
+            update_post_meta( $slidedeck_id, "{$this->namespace}_stage_background", slidedeck2_sanitize($_POST['background']) );
+            update_user_meta( $current_user->ID, "{$this->namespace}_default_stage_background", slidedeck2_sanitize($_POST['background']) );
         }
     }
 
@@ -1794,7 +1882,7 @@ class SlideDeckLitePlugin {
         if( !wp_verify_nonce( $_REQUEST['verify_addons_nonce'], "{$this->namespace}_verify_addons_license_key" ) )
             wp_die( __( "Unauthorized request!", $this->namespace ) );
 
-        $license_key = $_REQUEST['data']['license_key'];
+        $license_key = slidedeck2_sanitize($_REQUEST['data']['license_key']);
         $install_link = false;
         $installable_addons = false;
         $cohort_data = self::get_cohort_data();
@@ -2474,7 +2562,7 @@ class SlideDeckLitePlugin {
     static function discount_time_left() {
         $dates = self::get_installation_date();
         $start = $dates[0];
-        $end = strtotime( "+1 week", $start );
+        $end = strtotime( "+6 months", $start );
         $now = $dates[1];
         if ( $now - $start > 0 ) {
             return $days_left = $end - $now;
@@ -2498,8 +2586,10 @@ class SlideDeckLitePlugin {
         if ( $this->is_plugin() && get_current_screen()->id != $this->menu['upgrades'] ) {
             $days_left = self::discount_time_left();
             
+        if(isset($_GET['error']) && !empty($_GET['error'])) $error = $_GET['error'];
+            echo $error;
             $message = '<div id="discount-upgrade-notice">';
-            
+            /*
             if ( $days_left > 86400 ) {
                 $days_left = ceil( $days_left/86400 );
                 $message .= '<p><strong>Upgrade to SlideDeck 2 in the next ' . $days_left . ' days and get 25% off -</strong> Like what you\'ve seen with SlideDeck 2 Lite so far?. ';
@@ -2507,11 +2597,39 @@ class SlideDeckLitePlugin {
                 $days_left = 0;
                 $message .= '<p><strong>Last day to save 25% to upgrade to SlideDeck 2! -</strong> Like what you\'ve seen with SlideDeck 2 Lite so far?. ';
             }
+            */?>
+
+            <div id="discount-upgrade-notice">
+                <span style="float:left;"><img src="https://s3-us-west-2.amazonaws.com/slidedeck-pro/addons_assets/images/slidedeck-responsive2.png" width="400px" height="190px" alt="SlideDeck 3 Wordpress Slider in Minutes"> </span>
+            <p style="font-size:16px;"><strong><em>SlideDeck3 is now available - free update </em></strong></p>
+            <p><strong>The latest version of SlideDeck offers more lenses, powerful new features, and works with all your existing sliders. Get it Now!</strong></p>
+                        
+            <p>
+            <?php
+                if (!file_exists(ABSPATH.'wp-content/plugins/slidedeck3/slidedeck2-lite.php')) {
+            ?>
+                <a class="button create-button" style="background-color:rgb(85,167,94) !important;color:white;" href="<?php echo admin_url( 'admin-ajax.php?action=' . $this->namespace . '_install_plugin_install&_wpnonce=' . wp_create_nonce( $this->namespace . '_install_plugin_slidedeck3' ) ); ?>" ><?php _e( "Install Slidedeck3 Lite", $this->namespace ); ?></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://www.slidedeck.com/demo/" ><?php _e( "LIVE DEMO", $this->namespace ); ?></a></p>
+            <?php 
+                } else {
+            ?>    
+            <a class="button create-button" style="background-color:rgb(85,167,94) !important;color:white;" href="<?php echo admin_url( 'admin-ajax.php?action=' . $this->namespace . '_install_plugin_activate&_wpnonce=' . wp_create_nonce( $this->namespace . '_activate_plugin_slidedeck3' ) ); ?>" ><?php _e( "Activate Slidedeck3 Lite", $this->namespace ); ?></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="https://www.slidedeck.com/demo/" ><?php _e( "LIVE DEMO", $this->namespace ); ?></a>
+            </p>
+            <?php } ?>
+            <p>(Please Note : In case of any issues, you can revert back to SlideDeck2 <br/>by deactivating SlideDeck3 and Activating SlideDeck2 from WordPress Plugin Dashboard)</p>
+                        
+<?php
             
-            $message .= '<a href="' . $this->action( '/upgrades' ) . '">Upgrade to SlideDeck 2 Now</a>';
+             
+            echo '</div>';
+	    $message .= '<p style="color:red">ATTENTION : We have stopped supporting SlideDeck2 Now.</p>';
+            $message .= '<p><strong>Migrate to SlideDeck3 in 3 simple steps - without loosing any data!!</strong></p>';
+            $message .= '<p>Install SlideDeck3 Lite&nbsp;&nbsp;&nbsp;>>&nbsp;&nbsp;&nbsp;Deactivate SlideDeck2 Lite&nbsp;&nbsp;&nbsp;>>&nbsp;&nbsp;&nbsp;Activate SlideDeck3 Lite</p>';
+            $message .= '<p><a href="https://wordpress.org/plugins/slidedeck3/">MIGRATE NOW</a>';
             $message .= '</p></div>';
             
-            echo $message;
+          //  echo $message;
         }
     }
 
@@ -2763,7 +2881,7 @@ class SlideDeckLitePlugin {
         // Initiate pointers on this page
         //$this->Pointers->pointer_lens_management();
         if( !$this->get_partner_data() ){
-            $this->Pointers->pointer_installation_discount();
+             $this->Pointers->pointer_installation_discount();
         }
 
         $default_view = get_user_option( "{$this->namespace}_default_manage_view" );
@@ -2858,6 +2976,7 @@ class SlideDeckLitePlugin {
                      */
                     if( !preg_match( '/^http|https/', $package ) )
                         $package = 'http://' . $package;
+
 
 
                     

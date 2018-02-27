@@ -126,7 +126,7 @@ float:left;
 {
     border: 0 none;
     margin-top: 6px;
-    width: 36px;
+    width: 32px !important;
 	margin-left:1px;
 }
 #acx_help_page
@@ -390,13 +390,12 @@ width: 283px;
     width: 786px;
 	float: left;
 }
-#ss_features_table
+ #ss_features_table
 {
-    background: url("../images/ss_table_footer.png") no-repeat scroll center bottom rgba(0, 0, 0, 0);
     float: left;
     margin: -62px 0 0;
     width: 940px;
-}
+} 
 #ss_table_header
 {	
     width: 940px;

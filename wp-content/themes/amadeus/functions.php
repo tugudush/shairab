@@ -50,40 +50,50 @@ if ( ! function_exists( 'amadeus_setup' ) ) :
 		add_image_size( 'amadeus-slider-size', 1000, 250, true );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'amadeus' ),
-			'social'  => __( 'Social', 'amadeus' ),
-		) );
+		register_nav_menus(
+			array(
+				'primary' => __( 'Primary Menu', 'amadeus' ),
+				'social'  => __( 'Social', 'amadeus' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5', array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		/*
 		 * Enable support for Post Formats.
 		 * See http://codex.wordpress.org/Post_Formats
 		 */
-		add_theme_support( 'post-formats', array(
-			'aside',
-			'image',
-			'video',
-			'quote',
-			'link',
-		) );
+		add_theme_support(
+			'post-formats', array(
+				'aside',
+				'image',
+				'video',
+				'quote',
+				'link',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'amadeus_custom_background_args', array(
-			'default-color' => 'f7f3f0',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background', apply_filters(
+				'amadeus_custom_background_args', array(
+					'default-color' => 'f7f3f0',
+					'default-image' => '',
+				)
+			)
+		);
 
 		/* Add custom logo support */
 		add_theme_support( 'custom-logo' );
@@ -106,39 +116,47 @@ add_action( 'after_setup_theme', 'amadeus_setup' );
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function amadeus_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'amadeus' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer left', 'amadeus' ),
-		'id'            => 'sidebar-4',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer center', 'amadeus' ),
-		'id'            => 'sidebar-5',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer right', 'amadeus' ),
-		'id'            => 'sidebar-6',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => __( 'Sidebar', 'amadeus' ),
+			'id'            => 'sidebar-1',
+			'description'   => '',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Footer left', 'amadeus' ),
+			'id'            => 'sidebar-4',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Footer center', 'amadeus' ),
+			'id'            => 'sidebar-5',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Footer right', 'amadeus' ),
+			'id'            => 'sidebar-6',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
 
 	// Custom widgets
 	register_widget( 'Amadeus_Video' );
@@ -224,7 +242,7 @@ function amadeus_register_required_plugins() {
 
 		array(
 			'name'     => 'Pirate Forms',
-			'slug' 	   => 'pirate-forms',
+			'slug'     => 'pirate-forms',
 			'required' => false,
 		),
 	);
